@@ -1,8 +1,10 @@
-body {
-  background-color: red;
+// foundation
+@use "./foundation/reset";
+@use "./foundation/base";
 
-  h1 {
-    color: white;
-  }
-  background-color: black;
-}
+// layout
+@use "./layout/header";
+
+// components
+@use "./components/logo";
+@use "./components/sns-links";

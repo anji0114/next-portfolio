@@ -1,0 +1,19 @@
+.c-logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    display: block;
+  }
+}
+
+.c-logo__text {
+  margin-left: 5px;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: transparent;
+  background-image: linear-gradient(to bottom, #777, #222);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
