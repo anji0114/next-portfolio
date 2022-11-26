@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="882.376" height="719.203" viewBox="0 0 882.376 719.203">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.732" x2="0.709" y2="0.97" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#efefef"/>
+    </linearGradient>
+    <filter id="パス_5" x="160.801" y="0" width="548.285" height="564.576" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-opacity="0.078"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fefefe"/>
+      <stop offset="1" stop-color="#eee"/>
+    </linearGradient>
+    <filter id="パス_6" x="0" y="437.683" width="810.19" height="281.52" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-2"/>
+      <feFlood flood-opacity="0.082"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fafafa"/>
+      <stop offset="1" stop-color="#eee"/>
+    </linearGradient>
+    <filter id="パス_7" x="329.9" y="547.383" width="552.476" height="171.82" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-3"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="logo" transform="translate(17 -51)">
+    <g transform="matrix(1, 0, 0, 1, -17, 51)" filter="url(#パス_5)">
+      <path id="パス_5-2" data-name="パス 5" d="M232.588-4.836,358.642,285.356S272.8,277.239,147.271,336.92-153.643,523.74-153.643,523.74Z" transform="translate(326.44 16.84)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -17, 51)" filter="url(#パス_6)">
+      <path id="パス_6-2" data-name="パス 6" d="M745.048-31.607,780.286,42.54s-49.482-6.551-119.306-6.1c-58.832.383-132.185,5.75-201.4,23.937-151.451,39.8-279.737,141.346-279.737,141.346H6.1s18.66-25.934,53.6-56.176C111.415,100.8,196.312,31.907,307.753-1.142c71.255-21.131,151.675-38.59,224.859-41.7C650.286-47.832,745.048-31.607,745.048-31.607Z" transform="translate(5.9 493.48)" fill="url(#linear-gradient-2)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -17, 51)" filter="url(#パス_7)">
+      <path id="パス_7-2" data-name="パス 7" d="M457.809-67.646l58.667,135.82H0S92.512,1.145,206.964-32.809,457.809-67.646,457.809-67.646Z" transform="translate(341.9 627.03)" fill="url(#linear-gradient-3)"/>
+    </g>
+  </g>
+</svg>

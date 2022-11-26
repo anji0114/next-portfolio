@@ -1,9 +1,10 @@
+import { Mv } from "@/components/Mv";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="p-index">
-      <div className="p-mv"></div>
+      <Mv />
 
       <div className="p-index-about"></div>
 
