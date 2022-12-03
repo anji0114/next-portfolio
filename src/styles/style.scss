@@ -4,10 +4,14 @@
 
 // layout
 @use "./layout/header";
+@use "./layout/container";
 
 // components
+@use "./components/button";
+@use "./components/heading";
 @use "./components/logo";
 @use "./components/sns-links";
 
 // project
 @use "./project/mv";
+@use "./project/index-about";

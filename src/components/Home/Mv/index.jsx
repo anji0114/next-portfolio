@@ -4,6 +4,7 @@ export const Mv = () => {
   return (
     <div className="p-mv">
       <div className="p-mv__wrap">
+        {/* inner */}
         <div className="p-mv__inner">
           <div className="p-mv__content">
             <p className="p-mv__title">
@@ -20,6 +21,7 @@ export const Mv = () => {
             </p>
           </div>
         </div>
+        {/* image */}
         <div className="p-mv__image">
           <LogoMv />
         </div>
