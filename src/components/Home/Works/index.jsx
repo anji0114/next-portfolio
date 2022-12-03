@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Works = () => {
   return (
     <section className="p-index-works">
