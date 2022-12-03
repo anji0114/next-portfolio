@@ -1,3 +1,4 @@
+import { Button } from "@/components/Button";
 import Link from "next/link";
 
 export const About = () => {
@@ -17,10 +18,8 @@ export const About = () => {
               <br />
               consectetur quidem dolores laborum inventore architecto repudiandae neque nisi
             </p>
-            <div className="p-index-about__button c-button01__wrap">
-              <Link href={"/about"} className="c-button01">
-                <span>View About</span>
-              </Link>
+            <div className="p-index-about__button-wrap">
+              <Button url={"/about"}>View About</Button>
             </div>
           </div>
         </div>

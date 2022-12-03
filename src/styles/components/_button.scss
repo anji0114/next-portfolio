@@ -1,34 +1,55 @@
 @use "../global" as global;
 
 .c-button01 {
+  position: relative;
   display: inline-block;
-  padding: 1px;
-  background: linear-gradient(135deg, #cb5f5f, #edcb6d);
-  width: 270px;
+
   font-family: global.$font-en;
   font-size: 18px;
   border-radius: 5px;
 
-  span {
-    position: relative;
-    display: inline-block;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 15px 0;
-    text-align: center;
-    border-radius: 4px;
-    background-color: #fff;
-
-    &::before {
-    }
-
-    &::after {
-    }
+    height: 100%;
+    background: linear-gradient(135deg, #cb5f5f, #edcb6d);
+    opacity: 0.5;
+    filter: blur(15px);
   }
 
   &:hover {
-    span {
+    .c-button01__text {
       color: #fff;
       background-color: transparent;
     }
+  }
+}
+
+.c-button01__wrap {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1px;
+  background: linear-gradient(135deg, #cb5f5f, #edcb6d);
+  width: 270px;
+}
+
+.c-button01__text {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+
+  &::after {
   }
 }
