@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import LogoBlack from "images/logo-black.svg";
+import LogoBlack from "images/icons/logo-black.svg";
 
 export const Logo = () => {
   return (

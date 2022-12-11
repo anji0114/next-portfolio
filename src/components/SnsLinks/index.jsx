@@ -1,7 +1,7 @@
 import { SnsLink } from "@/components/SnsLinks/SnsLink";
-import TwitterIcon from "images/twitter.svg";
-import ZennIcon from "images/zenn.svg";
-import GithubIcon from "images/github.svg";
+import TwitterIcon from "images/icons/twitter.svg";
+import ZennIcon from "images/icons/zenn.svg";
+import GithubIcon from "images/icons/github.svg";
 
 export const SnsLinks = () => {
   return (

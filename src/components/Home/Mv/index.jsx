@@ -1,4 +1,4 @@
-import LogoMv from "images/logo_mv.svg";
+import LogoMv from "images/icons/logo_mv.svg";
 
 export const Mv = () => {
   return (
