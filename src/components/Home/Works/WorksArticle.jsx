@@ -9,13 +9,11 @@ export const WorksArticle = () => {
         <p className="p-index-works__description">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, nobis.
         </p>
-        <ul className="p-index-works__categories">
-          <li className="p-idex-works__category">
-            <a href="">Web Application</a>
-          </li>
-        </ul>
+        <a href="" className="p-idex-works__category">
+          Web Application
+        </a>
       </div>
-      <a href="" className="c-link-overlay"></a>
+      <a href="" className="c-link__overlay"></a>
     </article>
   );
 };
