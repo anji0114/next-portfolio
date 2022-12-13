@@ -1,0 +1,13 @@
+@use "../global" as global;
+
+.l-footer {
+  @include global.mq("md") {
+    margin-top: 125px;
+  }
+}
+
+.l-footer__contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 0 25px;
+}

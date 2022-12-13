@@ -3,8 +3,9 @@
 @use "./foundation/base";
 
 // layout
-@use "./layout/header";
 @use "./layout/container";
+@use "./layout/footer";
+@use "./layout/header";
 
 // components
 @use "./components/button";
@@ -15,6 +16,8 @@
 @use "./components/sns-links";
 
 // project
+@use "./project/contact";
 @use "./project/mv";
 @use "./project/index-about";
-@use "./project/index-works";
+@use "./project/home-works";
+@use "./project/home-repository";

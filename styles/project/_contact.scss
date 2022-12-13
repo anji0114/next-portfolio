@@ -1,0 +1,72 @@
+@use "../global" as global;
+
+.p-contact {
+}
+
+.p-contact__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: global.$c-black;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #1a1a1a;
+  }
+
+  @include global.mq("md") {
+    padding: 74px 0;
+  }
+}
+
+.p-contact__text {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding-right: 87px;
+  font-weight: 700;
+  font-family: global.$font-en;
+  letter-spacing: 0.05em;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(90deg, #cb5f5f, #edcb6d);
+
+  @include global.mq("md") {
+    font-size: 80px;
+  }
+}
+
+.p-contact__arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: inline-block;
+  width: 40px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #edcb6d;
+  transform: translateY(calc(-50% + 2px)) rotate(-45deg);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    width: 18px;
+    height: 4px;
+    background-color: #edcb6d;
+    border-radius: 4px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    top: -6px;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    top: 6px;
+  }
+}

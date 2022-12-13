@@ -6,11 +6,15 @@ export const Footer = () => {
   return (
     <footer className="l-footer">
       <Contact />
-      <div className="l-footer__inner">
-        {/* logo */}
-        <Logo />
-
-        <SnsLinks />
+      <div className="l-container">
+        <div className="l-footer__contents">
+          <div className="l-footer__logo">
+            <Logo />
+          </div>
+          <div className="l-footer__links">
+            <SnsLinks />
+          </div>
+        </div>
       </div>
     </footer>
   );
