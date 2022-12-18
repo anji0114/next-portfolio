@@ -1,3 +1,4 @@
+import { SnsLinks } from "@/components/SnsLinks";
 import Link from "next/link";
 
 export const Navbar = () => {
@@ -33,7 +34,12 @@ export const Navbar = () => {
             <Link href={""}>CONTACT</Link>
           </li>
         </ul>
-        <div className="l-header__nav-bottom"></div>
+        <div className="l-header__nav-bottom">
+          <div className="l-header__sns">
+            <SnsLinks />
+          </div>
+          <p className="l-header__privacy">©︎2022 Anji Tanaka</p>
+        </div>
       </div>
     </nav>
   );

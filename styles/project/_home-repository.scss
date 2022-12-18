@@ -3,6 +3,7 @@
 .p-home-repository {
   margin-top: 125px;
 }
+
 .p-home-repository__contents {
   margin-top: 60px;
 }
@@ -30,10 +31,10 @@
   }
 
   @include global.mq("md") {
-    width: calc((100% - 25px * 2) / 3);
+    width: calc((100% - 20px * 2) / 3);
 
     &:nth-of-type(n + 4) {
-      margin-top: 25px;
+      margin-top: 20px;
     }
   }
 }
@@ -62,13 +63,14 @@
   color: #333;
 
   @include global.mq("md") {
-    margin-top: 7px;
-    min-height: 45px;
+    font-size: 14px;
+    margin-top: 10px;
+    min-height: 40px;
   }
 }
 
 .p-home-repository__info {
-  margin-top: 18px;
+  margin-top: 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92,10 +94,11 @@
 
   @include global.mq("md") {
     padding-left: 24px;
+    font-size: 14px;
 
     &::before {
-      width: 15px;
-      height: 15px;
+      width: 12px;
+      height: 12px;
     }
   }
 }
