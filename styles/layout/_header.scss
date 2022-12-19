@@ -21,8 +21,8 @@
 .l-header__button {
   position: relative;
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border: 1px solid #fcfcfc;
   border-radius: 50%;
   background: #fff;
@@ -32,25 +32,20 @@
     position: absolute;
     display: inline-block;
     left: 50%;
-    width: 29px;
-    height: 3px;
+    width: 25px;
+    height: 2px;
     background-color: #383838;
     border-radius: 3px;
     transform: translate(-50%, -50%);
 
     &:nth-of-type(1) {
-      top: calc(50% - 6px);
+      top: calc(50% - 5px);
     }
     &:nth-of-type(2) {
       top: calc(50% + 1px);
     }
     &:nth-of-type(3) {
-      top: calc(50% + 8px);
-    }
-
-    &:nth-of-type(4),
-    &:nth-of-type(5) {
-      display: none;
+      top: calc(50% + 7px);
     }
   }
 }

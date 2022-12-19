@@ -24,7 +24,7 @@
     transition: transform 0.3s;
   }
 
-  svg {
+  img {
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -40,7 +40,7 @@
   }
 
   &:hover {
-    svg {
+    img {
       filter: brightness(0) invert(1);
     }
     &::after {

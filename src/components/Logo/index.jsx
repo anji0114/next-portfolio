@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import LogoBlack from "images/icons/logo-black.svg";
+import logoBlack from "images/icons/logo-black.svg";
 
 export const Logo = () => {
   return (
     <Link href={"/"} className="c-logo">
-      <LogoBlack />
+      <Image alt="" src={logoBlack} />
       <p className="c-logo__text">ANJI TANAKA</p>
     </Link>
   );

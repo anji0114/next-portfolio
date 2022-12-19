@@ -1,4 +1,5 @@
-import LogoMv from "images/icons/logo_mv.svg";
+import Image from "next/image";
+import logo from "images/icons/logo_mv.svg";
 
 export const Mv = () => {
   return (
@@ -23,7 +24,7 @@ export const Mv = () => {
         </div>
         {/* image */}
         <div className="p-mv__image">
-          <LogoMv />
+          <Image src={logo} alt="sass" />
         </div>
       </div>
     </div>

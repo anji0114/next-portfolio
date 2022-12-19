@@ -8,8 +8,6 @@ export const Navbar = () => {
         <span></span>
         <span></span>
         <span></span>
-        <span></span>
-        <span></span>
       </button>
       <div className="l-header__nav-wrap">
         <ul className="l-header__nav-list">
@@ -35,9 +33,7 @@ export const Navbar = () => {
           </li>
         </ul>
         <div className="l-header__nav-bottom">
-          <div className="l-header__sns">
-            <SnsLinks />
-          </div>
+          <div className="l-header__sns"><SnsLinks /></div>
           <p className="l-header__privacy">©︎2022 Anji Tanaka</p>
         </div>
       </div>
