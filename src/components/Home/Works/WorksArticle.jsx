@@ -1,8 +1,11 @@
+import Image from "next/image";
+import thumbnail from "images/home/works.jpg";
+
 export const WorksArticle = () => {
   return (
     <article className="p-home-works__article">
       <div className="p-home-works__thumbnail">
-        <img src="" alt="" />
+        <Image src={thumbnail} alt="サムネイル" />
       </div>
       <div className="p-home-works__content">
         <h3 className="p-home-works__title">Lorem ipsum dolor sit amet.</h3>

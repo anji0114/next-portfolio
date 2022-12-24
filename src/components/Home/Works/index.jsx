@@ -6,7 +6,7 @@ export const Works = () => {
     <section className="p-home-works">
       <div className="l-container">
         {/* heading */}
-        <h2 className="p-home-about__heading c-heading01 c-heading01--center">
+        <h2 className="p-home-works__heading c-heading01">
           <span className="c-heading01__text">My</span>&nbsp;
           <span className="c-gradient__text">Works</span>
         </h2>

@@ -5,7 +5,7 @@ export const Repository = () => {
   return (
     <section className="p-home-repository">
       <div className="l-container">
-        <h2 className="c-heading01 c-heading01--center">
+        <h2 className="c-heading01 p-home-repository__heading">
           <span className="c-heading01__text">My</span>&nbsp;
           <span className="c-gradient__text">Repository</span>
         </h2>

@@ -4,6 +4,10 @@
   margin-top: 125px;
 }
 
+.p-home-repository__heading {
+  text-align: center;
+}
+
 .p-home-repository__contents {
   margin-top: 60px;
 }
@@ -22,16 +26,27 @@
   border-radius: 5px;
   border: 1px solid #dddddd;
   background-color: #fff;
-  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+  transition: border 0.3s, box-shadow 0.3s, border 0.3s;
 
   &:hover {
-    transform: scale(1.01);
-    border: 1px solid #eee;
+    border: 1px solid #efefef;
     box-shadow: 0px 4px 8px rgba(11, 11, 11, 0.05);
   }
 
   @include global.mq("md") {
+    width: calc((100% - 20px) / 2);
+
+    &:nth-of-type(n + 3) {
+      margin-top: 20px;
+    }
+  }
+
+  @include global.mq("lg") {
     width: calc((100% - 20px * 2) / 3);
+
+    &:nth-of-type(n + 3) {
+      margin-top: 0;
+    }
 
     &:nth-of-type(n + 4) {
       margin-top: 20px;

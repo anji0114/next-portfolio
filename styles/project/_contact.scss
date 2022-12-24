@@ -34,6 +34,10 @@
   background-image: linear-gradient(90deg, #cb5f5f, #edcb6d);
 
   @include global.mq("md") {
+    font-size: 70px;
+  }
+
+  @include global.mq("lg") {
     font-size: 80px;
   }
 }

@@ -4,6 +4,10 @@
   margin-top: 125px;
 }
 
+.p-home-works__heading {
+  text-align: center;
+}
+
 .p-home-works__contents {
   margin-top: 60px;
 }
@@ -17,15 +21,71 @@
   position: relative;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
   width: calc((100% - 30px * 2) / 3);
+  transition: box-shadow 0.3s;
 
-  &:not(:nth-of-type(3n + 1)) {
-    margin-left: 30px;
+  @include global.mq("md") {
+    width: calc((100% - 30px) / 2);
+
+    &:not(:nth-of-type(2n + 1)) {
+      margin-left: 30px;
+    }
+
+    &:nth-of-type(n + 3) {
+      margin-top: 30px;
+    }
   }
 
-  &:nth-of-type(n + 4) {
-    margin-top: 30px;
+  @include global.mq("lg") {
+    width: calc((100% - 20px * 2) / 3);
+
+    &:not(:nth-of-type(2n + 1)) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(n + 3) {
+      margin-top: 0;
+    }
+
+    &:not(:nth-of-type(3n + 1)) {
+      margin-left: 20px;
+    }
+
+    &:nth-of-type(n + 4) {
+      margin-top: 20px;
+    }
+  }
+
+  @include global.mq("xl") {
+    width: calc((100% - 30px * 2) / 3);
+
+    &:not(:nth-of-type(3n + 1)) {
+      margin-left: 30px;
+    }
+
+    &:nth-of-type(n + 4) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.p-home-works__article {
+  > a {
+    z-index: 3;
+  }
+
+  &:hover {
+    .p-home-works__thumbnail::before {
+      opacity: 0;
+    }
+
+    .p-home-works__thumbnail img {
+      transform: scale(1);
+    }
+
+    .p-home-works__content {
+      border-color: #efefef;
+    }
   }
 }
 
@@ -35,13 +95,29 @@
   padding-bottom: 61%;
   border-radius: 8px 8px 0 0;
 
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.1;
+    transition: opacity 0.3s;
+  }
+
   img {
     position: absolute;
+    display: inline-block;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: scale(1.02);
+    transition: transform 0.3s;
   }
 }
 
@@ -51,6 +127,7 @@
   border-top: none;
   border-radius: 0 0 8px 8px;
   background-color: #fff;
+  transition: border-color 0.3s;
 }
 
 .p-home-works__title {
@@ -58,6 +135,10 @@
   font-weight: 700;
   letter-spacing: 0.025em;
   line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  overflow: hidden;
 }
 
 .p-home-works__description {
