@@ -1,44 +1,99 @@
-.c-gradient__text {
+%gradient-text {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  // background-image: linear-gradient(90deg, #cb5f5f, #edcb6d);
-  animation: gradientText 9s infinite;
 }
 
-@keyframes gradientText {
+.c-gradient__text-wrap {
+  position: relative;
+  display: inline-block;
+
+  &::before,
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    @extend %gradient-text;
+  }
+
+  &::before {
+    background-image: linear-gradient(90deg, #6d9aed, #5fbfcb);
+    animation: animate-gradient-text_fade 9s infinite;
+    animation-delay: -3s;
+  }
+
+  &::after {
+    background-image: linear-gradient(90deg, #62009f, #e06d6d);
+    animation: animate-gradient-text_fade 9s infinite;
+    animation-delay: -9s;
+  }
+}
+
+.c-gradient__text {
+  @extend %gradient-text;
+  background-image: linear-gradient(90deg, #cb5f5f, #edcb6d);
+  animation: animate-gradient-text_fade 9s infinite;
+  animation-delay: -6s;
+}
+
+@keyframes animate-gradient-text_fade {
   0% {
-    background-image: linear-gradient(90deg, #cb5f5f, #edcb6d);
+    opacity: 0;
   }
 
-  28% {
-    background-image: linear-gradient(90deg, #cb5f5f, #edcb6d);
+  56.6% {
+    opacity: 0;
   }
 
-  31% {
-    opacity: 0.9;
-  }
-
-  33% {
-    background-image: linear-gradient(90deg, #6d9aed, #5fbfcb);
-    opacity: 0.8;
-  }
-
-  61% {
-    background-image: linear-gradient(90deg, #6d9aed, #5fbfcb);
+  66.6% {
     opacity: 1;
   }
 
-  66% {
-    background-image: linear-gradient(90deg, #62009f, #e06d6d);
-  }
-
-  94% {
-    background-image: linear-gradient(90deg, #62009f, #e06d6d);
+  90% {
+    opacity: 1;
   }
 
   100% {
-    background-image: linear-gradient(90deg, #cb5f5f, #edcb6d);
+    opacity: 0%;
   }
 }
 
+.c-gradient__arrow {
+  animation: animate-gradient-arrow_fade 9s infinite;
+
+  &::before,
+  &::after {
+    animation: animate-gradient-arrow_fade 9s infinite;
+  }
+}
+
+@keyframes animate-gradient-arrow_fade {
+  0% {
+    background-color: #edcb6d;
+  }
+
+  23.3% {
+    background-color: #edcb6d;
+  }
+
+  33.3% {
+    background-color: #5fbfcb;
+  }
+
+  56.6% {
+    background-color: #5fbfcb;
+  }
+
+  66.6% {
+    background-color: #e06d6d;
+  }
+
+  90% {
+    background-color: #e06d6d;
+  }
+
+  100% {
+    background-color: #edcb6d;
+  }
+}

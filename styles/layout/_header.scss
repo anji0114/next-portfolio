@@ -5,6 +5,8 @@
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  background-size: 100% 150%;
+  background-position: center bottom;
   background-image: linear-gradient(#666, #1a1a1a);
 }
 
@@ -139,20 +141,58 @@
   transition: opacity 0.4s, visibility 0.4s;
   background-color: #fafafa;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(150deg, #cb5f5f 0%, #edcb6d 15%, #fafafa 30%, #fafafa 100%);
-    opacity: 0.15;
-  }
-
   &.is--open {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+.l-header__nav-wrap-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+}
+
+.l-header__nav-wrap-bg01 {
+  background: linear-gradient(150deg, #cb5f5f 0%, #edcb6d 15%, #fafafa 30%, #fafafa 100%);
+  animation: animate-gradient-nav-bg_fade 9s infinite;
+  animation-delay: -6s;
+}
+
+.l-header__nav-wrap-bg02 {
+  background: linear-gradient(150deg, #6d9aed 0%, #5fbfcb 15%, #fafafa 30%, #fafafa 100%);
+  animation: animate-gradient-nav-bg_fade 9s infinite;
+  animation-delay: -3s;
+}
+
+.l-header__nav-wrap-bg03 {
+  background: linear-gradient(150deg, #62009f 0%, #e06d6d 15%, #fafafa 30%, #fafafa 100%);
+  animation: animate-gradient-nav-bg_fade 9s infinite;
+  animation-delay: -9s;
+}
+
+@keyframes animate-gradient-nav-bg_fade {
+  0% {
+    opacity: 0;
+  }
+
+  56.6% {
+    opacity: 0;
+  }
+
+  66.6% {
+    opacity: 0.15;
+  }
+
+  90% {
+    opacity: 0.15;
+  }
+
+  100% {
+    opacity: 0%;
   }
 }
 
@@ -185,6 +225,11 @@
     font-size: 60px;
     line-height: 1;
     @extend %gradient-text;
+    transition: opacity 0.3s;
+  }
+
+  > a:hover {
+    opacity: 0.8;
   }
 }
 
@@ -204,6 +249,7 @@
     font-size: 30px;
     line-height: 1;
     @extend %gradient-text;
+    transition: opacity 0.3s;
   }
 
   > a::before {
@@ -215,6 +261,10 @@
     width: 20px;
     height: 3px;
     background-image: linear-gradient(#666, #1a1a1a);
+  }
+
+  > a:hover {
+    opacity: 0.8;
   }
 }
 

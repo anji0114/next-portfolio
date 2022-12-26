@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/Header/Navbar";
+import { Nav } from "@/components/Header/Nav";
 import { Logo } from "@/components/Logo";
 
 export const Header = () => {
@@ -9,7 +9,7 @@ export const Header = () => {
 
         {/* switch light */}
         {/* navbar */}
-        <Navbar />
+        <Nav />
       </div>
     </header>
   );

@@ -6,6 +6,7 @@ export const WorksArticle = () => {
     <article className="p-home-works__article">
       <div className="p-home-works__thumbnail">
         <Image src={thumbnail} alt="サムネイル" />
+        <span className="p-home-works__arrow"></span>
       </div>
       <div className="p-home-works__content">
         <h3 className="p-home-works__title">Lorem ipsum dolor sit amet.</h3>

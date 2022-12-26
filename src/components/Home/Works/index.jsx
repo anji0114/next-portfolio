@@ -8,7 +8,9 @@ export const Works = () => {
         {/* heading */}
         <h2 className="p-home-works__heading c-heading01">
           <span className="c-heading01__text">My</span>&nbsp;
-          <span className="c-gradient__text">Works</span>
+          <span className="c-gradient__text-wrap" data-text="Works">
+            <span className="c-gradient__text">Works</span>
+          </span>
         </h2>
         <div className="p-home-works__contents">
           <div className="p-home-works__articles">

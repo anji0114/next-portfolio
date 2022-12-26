@@ -2,7 +2,7 @@ import { SnsLinks } from "@/components/SnsLinks";
 import Link from "next/link";
 import { useState } from "react";
 
-export const Navbar = () => {
+export const Nav = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   const navToggle = () => {
@@ -51,6 +51,9 @@ export const Navbar = () => {
             <p className="l-header__privacy">©︎2022 Anji Tanaka</p>
           </div>
         </div>
+        <span className="l-header__nav-wrap-bg l-header__nav-wrap-bg01"></span>
+        <span className="l-header__nav-wrap-bg l-header__nav-wrap-bg02"></span>
+        <span className="l-header__nav-wrap-bg l-header__nav-wrap-bg03"></span>
       </div>
     </nav>
   );

@@ -1,5 +1,4 @@
 import { Button } from "@/components/Button";
-import Link from "next/link";
 
 export const About = () => {
   return (
@@ -8,13 +7,17 @@ export const About = () => {
         <div className="p-home-about__row">
           {/* heading */}
           <h2 className="p-home-about__heading c-heading01">
-            <span className="c-gradient__text">About</span>&nbsp;
+            <span className="c-gradient__text-wrap" data-text="About">
+              <span className="c-gradient__text">About</span>
+            </span>
+            &nbsp;
             <span className="c-heading01__text">Me</span>
           </h2>
           {/* content */}
           <div className="p-home-about__contents">
             <p className="p-home-about__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit text text Consequuntur dolore porro,
+              Lorem ipsum dolor sit amet consectetur adipisicing elit text text Consequuntur dolore
+              porro,
               <br />
               consectetur quidem dolores laborum inventore architecto repudiandae neque nisi
             </p>
