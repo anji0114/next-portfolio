@@ -8,11 +8,11 @@
   display: block;
   width: 100%;
   text-align: center;
-  background-color: global.$c-black;
+  background-color: global.$c-base;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: global.$c-base;
+    background-color: global.$c-black;
   }
 
   @include global.mq("md") {

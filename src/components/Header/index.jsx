@@ -6,9 +6,6 @@ export const Header = () => {
     <header className="l-header">
       <div className="l-header__inner">
         <Logo />
-
-        {/* switch light */}
-        {/* navbar */}
         <Nav />
       </div>
     </header>

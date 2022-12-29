@@ -39,6 +39,10 @@ export const Mv = () => {
         <div className="p-home-mv__image">
           <Image src={logo} alt="sass" />
         </div>
+        <div className="p-home-mv__scroll">
+          <span className="p-home-mv__scroll-bar"></span>
+          <span className="p-home-mv__scroll-text">Scroll</span>
+        </div>
       </div>
     </div>
   );

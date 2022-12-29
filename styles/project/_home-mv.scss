@@ -158,3 +158,63 @@
     width: 900px;
   }
 }
+
+.p-home-mv__scroll {
+  position: absolute;
+  bottom: 10px;
+
+  @include global.mq("xl") {
+    left: calc((100% - 1140px) / 2 + 2px);
+    bottom: 30px;
+  }
+}
+
+.p-home-mv__scroll-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 5px;
+  height: 75px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: global.$c-black-dark;
+
+    animation: animation-scroll-down 2s infinite ease;
+  }
+}
+
+@keyframes animation-scroll-down {
+  0% {
+    top: -12px;
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.p-home-mv__scroll-text {
+  display: inline-block;
+  padding-left: 20px;
+  height: 75px;
+  line-height: 75px;
+  font-family: global.$font-en;
+}

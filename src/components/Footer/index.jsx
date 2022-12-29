@@ -13,6 +13,7 @@ export const Footer = () => {
           </div>
           <div className="l-footer__links">
             <SnsLinks />
+            <p className="l-footer__privacy">©︎2022 Anji Tanaka</p>
           </div>
         </div>
       </div>
