@@ -1,7 +1,9 @@
 import { Button } from "@/components/Button";
-import { WorksArticle } from "@/components/Home/Works/WorksArticle";
+import Image from "next/image";
+import thumbnail from "images/home/works.jpg";
+import Link from "next/link";
 
-export const Works = () => {
+export const Works = ({ works }) => {
   return (
     <section className="p-home-works">
       <div className="l-container">
@@ -14,12 +16,20 @@ export const Works = () => {
         </h2>
         <div className="p-home-works__contents">
           <div className="p-home-works__articles">
-            <WorksArticle />
-            <WorksArticle />
-            <WorksArticle />
-            <WorksArticle />
-            <WorksArticle />
-            <WorksArticle />
+            {works.contents.map((work) => (
+              <article key={work.id} className="p-home-works__article">
+                <div className="p-home-works__thumbnail">
+                  <Image src={thumbnail} alt="サムネイル" />
+                  <span className="p-home-works__arrow"></span>
+                </div>
+                <div className="p-home-works__content">
+                  <h3 className="p-home-works__title">{work.title}</h3>
+                  <p className="p-home-works__description">{work.description}</p>
+                  <p className="p-home-works__type">{work.type}</p>
+                </div>
+                <Link href={`/works/${work.slug}`} className="c-link__overlay"></Link>
+              </article>
+            ))}
           </div>
           <div className="p-home-works__button-wrap">
             <Button url={"/works"}>View Works</Button>

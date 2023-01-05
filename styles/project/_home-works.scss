@@ -180,11 +180,12 @@
   min-height: 42px;
 }
 
-.p-home-works__category {
+.p-home-works__type {
   display: block;
   width: fit-content;
+  text-align: center;
   margin-top: 20px;
-  padding: 5px 12px 3px;
+  padding: 5px 14px 3px;
   font-size: 12px;
   font-weight: 500;
   font-family: global.$font-en;
