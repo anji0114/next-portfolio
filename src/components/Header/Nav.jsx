@@ -51,9 +51,9 @@ export const Nav = () => {
             <p className="l-header__privacy">©︎2022 Anji Tanaka</p>
           </div>
         </div>
-        <span className="l-header__nav-wrap-bg l-header__nav-wrap-bg01"></span>
-        <span className="l-header__nav-wrap-bg l-header__nav-wrap-bg02"></span>
-        <span className="l-header__nav-wrap-bg l-header__nav-wrap-bg03"></span>
+        <span className="l-header__nav-wrap-bg l-header__nav-wrap-bg01 c-grade__bg01--first"></span>
+        <span className="l-header__nav-wrap-bg l-header__nav-wrap-bg02 c-grade__bg01--second"></span>
+        <span className="l-header__nav-wrap-bg l-header__nav-wrap-bg03 c-grade__bg01--third"></span>
       </div>
     </nav>
   );

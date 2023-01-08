@@ -16,3 +16,16 @@
   -webkit-background-clip: text;
   background-image: linear-gradient(global.$c-black-light, global.$c-base);
 }
+
+.c-heading02 {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: global.$font-en;
+}
+
+.c-heading02__text {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(global.$c-black-light, global.$c-base);
+}

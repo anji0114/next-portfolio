@@ -163,6 +163,8 @@
   position: absolute;
   bottom: 10px;
 
+  left: 30px;
+
   @include global.mq("xl") {
     left: calc((100% - 1140px) / 2 + 2px);
     bottom: 30px;

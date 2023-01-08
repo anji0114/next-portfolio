@@ -16,6 +16,9 @@
 @use "./components/sns-links";
 
 // project
+@use "./project/about-mv";
+@use "./project/about-profile";
+@use "./project/about-skill";
 @use "./project/contact";
 @use "./project/home-mv";
 @use "./project/home-about";

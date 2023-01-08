@@ -1,0 +1,45 @@
+@use "../global" as global;
+
+.p-about-profile {
+  padding: 90px 0 0;
+}
+
+.p-about-profile__grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-about-profile__heading {
+  width: 280px;
+
+  @include global.mq("lg") {
+    width: 300px;
+  }
+}
+
+.p-about-profile__contents {
+  width: calc(100% - 280px);
+  @include global.mq("lg") {
+    width: calc(100% - 300px);
+  }
+}
+
+.p-about-profile__content {
+  &:not(:first-of-type) {
+    margin-top: 60px;
+  }
+}
+
+.p-about-profile__title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.p-about-profile__description {
+  margin-top: 20px;
+  line-height: 2;
+
+  @include global.mq("lg") {
+    font-size: 18px;
+  }
+}

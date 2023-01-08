@@ -1,4 +1,5 @@
 import { Mv as AboutMv } from "@/components/About/Mv";
+import { Profile } from "@/components/About/Profile";
 import { Skill } from "@/components/About/Skill";
 
 const About = () => {
@@ -10,6 +11,7 @@ const About = () => {
       <Skill />
 
       {/* p-profile */}
+      <Profile />
     </div>
   );
 };
