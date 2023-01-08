@@ -32,7 +32,7 @@ export const Profile = () => {
           </div>
           <div className="p-about-profile__contents">
             {ProfileContents.map(({ title, description }) => (
-              <dl className="p-about-profile__content">
+              <dl key={title} className="p-about-profile__content">
                 <dt className="p-about-profile__title">{title}</dt>
                 <dd className="p-about-profile__description">{description}</dd>
               </dl>
