@@ -1,0 +1,16 @@
+<svg id="コンポーネント_4_1" data-name="コンポーネント 4 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_240" data-name="長方形 240" width="18" height="18" transform="translate(486.396 306.929)" fill="none" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="マスクグループ_3" data-name="マスクグループ 3" transform="translate(-486.396 -306.929)" clip-path="url(#clip-path)">
+    <g id="コンポーネント_3_1" data-name="コンポーネント 3 – 1" transform="translate(482.558 303.335)">
+      <g id="グループ_532" data-name="グループ 532" transform="matrix(0.695, -0.719, 0.719, 0.695, -1335.622, 113.74)">
+        <rect id="長方形_193" data-name="長方形 193" width="20" height="3" rx="1.5" transform="translate(999 898)" fill="#222"/>
+        <rect id="長方形_194" data-name="長方形 194" width="10" height="3" rx="1.5" transform="translate(1012.45 892.01) rotate(45)" fill="#222"/>
+        <rect id="長方形_195" data-name="長方形 195" width="10" height="3" rx="1.5" transform="translate(1010.247 904.943) rotate(-45)" fill="#222"/>
+      </g>
+    </g>
+  </g>
+</svg>

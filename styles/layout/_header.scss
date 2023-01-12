@@ -205,6 +205,25 @@
   }
 }
 
+.l-header__nav-item.is--contact a {
+  position: relative;
+  padding-right: 33px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url(../../images/icons/icon_arrow03.svg);
+  }
+}
+
 .l-header__nav-drawer {
   margin-top: 15px;
   padding-left: 5px;

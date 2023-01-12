@@ -87,6 +87,7 @@
 }
 
 .p-works-category__item a:hover {
+  color: global.$c-black-darkest;
   background-color: #fff;
 
   &::before {

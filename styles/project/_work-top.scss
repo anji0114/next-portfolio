@@ -1,0 +1,55 @@
+@use "../global" as global;
+
+.p-work {
+  padding-top: 160px;
+}
+
+.p-work__inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.p-work-top__heading {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.p-work-top__title {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  margin-right: 30px;
+}
+
+.p-work-top__date {
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 500;
+  color: #777777;
+}
+
+.p-work-top__description {
+  margin-top: 25px;
+  padding: 0 5px;
+  line-height: 1.75;
+}
+
+.p-work-top__categories {
+  margin-top: 15px;
+}
+
+.p-work-top__category {
+  display: inline-block;
+  padding: 5px 14px 3px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: global.$font-en;
+  color: #fff;
+  background: linear-gradient(150deg, #333, #777);
+  border-radius: 100px;
+
+  &:not(:first-of-type) {
+    margin-left: 10px;
+  }
+}

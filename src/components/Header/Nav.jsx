@@ -24,13 +24,13 @@ export const Nav = () => {
         <div className="l-header__nav-inner">
           <ul className="l-header__nav-list">
             <li className="l-header__nav-item">
-              <Link href={""}>HOME</Link>
+              <Link href={"/"}>HOME</Link>
             </li>
             <li className="l-header__nav-item">
-              <Link href={""}>ABOUT</Link>
+              <Link href={"/about"}>ABOUT</Link>
             </li>
             <li className="l-header__nav-item">
-              <Link href={""}>WORKS</Link>
+              <Link href={"/works"}>WORKS</Link>
               <ul className="l-header__nav-drawer">
                 <li className="l-header__nav-drawer-item">
                   <Link href={""}>Web Application</Link>
@@ -40,8 +40,8 @@ export const Nav = () => {
                 </li>
               </ul>
             </li>
-            <li className="l-header__nav-item l-header__nav-item--contact">
-              <Link href={""}>CONTACT</Link>
+            <li className="l-header__nav-item is--contact">
+              <Link href={"mailto:tanaka.anji14@gmail.com"}>CONTACT</Link>
             </li>
           </ul>
           <div className="l-header__nav-bottom">
