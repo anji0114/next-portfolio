@@ -23,10 +23,10 @@ export const Profile = () => {
         <div className="p-about-profile__grid">
           <div className="p-about-profile__heading">
             <h2 className="c-heading02">
-              <span className="c-heading02__text">MY</span>
+              <span className="c-heading02__text">My</span>
               &nbsp;
-              <span className="c-gradient__text-wrap" data-text="PROFILE">
-                <span className="c-gradient__text">PROFILE</span>
+              <span className="c-gradient__text-wrap" data-text="Profile">
+                <span className="c-gradient__text">Profile</span>
               </span>
             </h2>
           </div>

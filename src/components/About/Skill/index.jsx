@@ -8,11 +8,11 @@ export const Skill = () => {
         <div className="l-container">
           <div className="p-about-skill__heading">
             <h2 className="c-heading02">
-              <span className="c-gradient__text-wrap" data-text="SKILL">
-                <span className="c-gradient__text">SKILL</span>
+              <span className="c-gradient__text-wrap" data-text="Skill">
+                <span className="c-gradient__text">Skill</span>
               </span>
               &nbsp;
-              <span className="c-heading02__text">SET</span>
+              <span className="c-heading02__text">Set</span>
             </h2>
             <SKillPrerequisite />
           </div>

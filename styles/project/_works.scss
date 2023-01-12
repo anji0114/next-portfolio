@@ -1,0 +1,29 @@
+@use "../global" as global;
+
+.p-works {
+  padding-top: 160px;
+}
+
+.p-works__contents {
+  margin-top: 90px;
+
+  @include global.mq("lg") {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-works__aside {
+  @include global.mq("lg") {
+    width: 200px;
+  }
+}
+
+.p-works__main {
+  margin-top: 50px;
+
+  @include global.mq("lg") {
+    margin-top: 0;
+    width: calc(100% - 260px);
+  }
+}
