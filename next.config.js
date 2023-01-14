@@ -5,6 +5,10 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  // Imageでmicro cmsの画像を表示するための設定
+  images: {
+    domains: ["images.microcms-assets.io"],
+  },
 };
 
 module.exports = nextConfig;

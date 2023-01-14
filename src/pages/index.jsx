@@ -4,12 +4,12 @@ import { Works } from "@/components/Home/Works";
 import { Repository } from "@/components/Home/Repository";
 import { client } from "src/libs/client";
 
-const Home = ({ works }) => {
+const Home = (props) => {
   return (
     <div className="p-index">
       <Mv />
       <About />
-      <Works works={works} />
+      <Works works={props} />
       <Repository />
     </div>
   );
@@ -18,9 +18,9 @@ const Home = ({ works }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const works = await client.getList({ endpoint: "works" });
+  const data = await client.getList({ endpoint: "works" });
 
   return {
-    props: { works: works },
+    props: data,
   };
 };

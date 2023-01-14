@@ -9,6 +9,10 @@ export const Nav = () => {
     setNavOpen(!navOpen);
   };
 
+  const navClose = () => {
+    setNavOpen(false);
+  };
+
   return (
     <nav className="l-header__nav">
       <button className={`l-header__button ${navOpen ? "is--open" : ""}`} onClick={navToggle}>
@@ -24,24 +28,36 @@ export const Nav = () => {
         <div className="l-header__nav-inner">
           <ul className="l-header__nav-list">
             <li className="l-header__nav-item">
-              <Link href={"/"}>HOME</Link>
+              <Link href={"/"} onClick={navClose}>
+                HOME
+              </Link>
             </li>
             <li className="l-header__nav-item">
-              <Link href={"/about"}>ABOUT</Link>
+              <Link href={"/about"} onClick={navClose}>
+                ABOUT
+              </Link>
             </li>
             <li className="l-header__nav-item">
-              <Link href={"/works"}>WORKS</Link>
+              <Link href={"/works"} onClick={navToggle}>
+                WORKS
+              </Link>
               <ul className="l-header__nav-drawer">
                 <li className="l-header__nav-drawer-item">
-                  <Link href={""}>Web Application</Link>
+                  <Link href={""} onClick={navToggle}>
+                    Web Application
+                  </Link>
                 </li>
                 <li className="l-header__nav-drawer-item">
-                  <Link href={""}>Web Site</Link>
+                  <Link href={""} onClick={navToggle}>
+                    Web Site
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="l-header__nav-item is--contact">
-              <Link href={"mailto:tanaka.anji14@gmail.com"}>CONTACT</Link>
+              <Link href={"mailto:tanaka.anji14@gmail.com"} onClick={navToggle}>
+                CONTACT
+              </Link>
             </li>
           </ul>
           <div className="l-header__nav-bottom">

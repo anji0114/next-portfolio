@@ -1,15 +1,17 @@
 import { Button } from "@/components/Button";
 import Image from "next/image";
 import thumbnail from "images/home/works.jpg";
+import { client } from "src/libs/client";
+import Link from "next/link";
 
-const worksSlug = () => {
+const worksSlug = ({ title, type, description, details }) => {
   return (
     <div className="p-work">
       <div className="l-container">
         <div className="p-work__inner">
           <div className="p-work-top">
             <div className="p-work-top__heading">
-              <div className="p-work-top__title">飯能駅前自習室</div>
+              <div className="p-work-top__title">{title}</div>
               <time className="p-work-top__date">2022.01.11</time>
             </div>
             <ul className="p-work-top__categories">
@@ -23,32 +25,28 @@ const worksSlug = () => {
                 <a href="">Web Application</a>
               </li>
             </ul>
-            <p className="p-work-top__description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum esse odio obcaecati
-              molestiae totam recusandae, expedita nisi quam numquam, suscipit ad rem nemo ab
-              distinctio, qui modi aut incidunt magnam.
-            </p>
+            <p className="p-work-top__description">{description}</p>
           </div>
           <div className="p-work-info">
             <div className="p-work-info__content">
               <dl className="p-work-info__list">
                 <dt className="p-work-info__title">種類</dt>
-                <dd className="p-work-info__description">Web　Application</dd>
+                <dd className="p-work-info__description">{type}</dd>
               </dl>
-              <dl className="p-work-info__list">
-                <dt className="p-work-info__title">制作期間</dt>
-                <dd className="p-work-info__description">3ヶ月</dd>
-              </dl>
-              <dl className="p-work-info__list">
-                <dt className="p-work-info__title">使用技術</dt>
-                <dd className="p-work-info__description">HTML/CSS/Sass/Javascript/php/WordPress</dd>
-              </dl>
-              <dl className="p-work-info__list">
-                <dt className="p-work-info__title">Git Hub</dt>
-                <dd className="p-work-info__description">
-                  <a href="">http://github/repository/web</a>
-                </dd>
-              </dl>
+              {details.map((detail) => (
+                <dl className="p-work-info__list" key={detail.title}>
+                  <dt className="p-work-info__title">{detail.title}</dt>
+                  <dd className="p-work-info__description">
+                    {detail.link ? (
+                      <a href={detail.text} target="_blank">
+                        {detail.text}
+                      </a>
+                    ) : (
+                      detail.text
+                    )}
+                  </dd>
+                </dl>
+              ))}
             </div>
           </div>
           <main className="p-work-main">
@@ -103,6 +101,30 @@ const worksSlug = () => {
       </div>
     </div>
   );
+};
+
+export const getStaticPaths = async () => {
+  const data = await client.getList({ endpoint: "works" });
+  const ids = data.contents.map((content) => `/works/${content.id}`);
+
+  return {
+    paths: ids,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async (context) => {
+  if (!context.params) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const data = await client.get({ endpoint: "works", contentId: context.params.id });
+
+  return {
+    props: data,
+  };
 };
 
 export default worksSlug;

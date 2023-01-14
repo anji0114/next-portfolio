@@ -1,6 +1,5 @@
 import { Button } from "@/components/Button";
 import Image from "next/image";
-import thumbnail from "images/home/works.jpg";
 import Link from "next/link";
 
 export const Works = ({ works }) => {
@@ -19,7 +18,12 @@ export const Works = ({ works }) => {
             {works.contents.map((work) => (
               <article key={work.id} className="p-home-works__article">
                 <div className="p-home-works__thumbnail">
-                  <Image src={thumbnail} alt="サムネイル" />
+                  <Image
+                    src={work.thumbnail.url}
+                    width={work.thumbnail.width}
+                    height={work.thumbnail.height}
+                    alt="サムネイル"
+                  />
                   <span className="p-home-works__arrow"></span>
                 </div>
                 <div className="p-home-works__content">
@@ -27,7 +31,7 @@ export const Works = ({ works }) => {
                   <p className="p-home-works__description">{work.description}</p>
                   <p className="p-home-works__type">{work.type}</p>
                 </div>
-                <Link href={`/works/${work.slug}`} className="c-link__overlay"></Link>
+                <Link href={`/works/${work.id}`} className="c-link__overlay"></Link>
               </article>
             ))}
           </div>
