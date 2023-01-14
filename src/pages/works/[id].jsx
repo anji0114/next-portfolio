@@ -38,9 +38,9 @@ const worksSlug = ({ title, type, description, details }) => {
                   <dt className="p-work-info__title">{detail.title}</dt>
                   <dd className="p-work-info__description">
                     {detail.link ? (
-                      <a href={detail.text} target="_blank">
+                      <Link href={detail.text} target="_blank">
                         {detail.text}
-                      </a>
+                      </Link>
                     ) : (
                       detail.text
                     )}
