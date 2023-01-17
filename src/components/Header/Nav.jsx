@@ -2,6 +2,36 @@ import { SnsLinks } from "@/components/SnsLinks";
 import Link from "next/link";
 import { useState } from "react";
 
+const NavItems = [
+  {
+    text: "HOME",
+    url: "/",
+  },
+  {
+    text: "ABOUT",
+    url: "/about",
+  },
+  {
+    text: "WORKS",
+    url: "/works",
+    drawers: [
+      {
+        text: " Web Application",
+        url: "/",
+      },
+      {
+        text: " Web Site",
+        url: "/",
+      },
+    ],
+  },
+  {
+    text: "CONTACT",
+    url: "mailto:tanaka.anji14@gmail.com",
+    arrow: true,
+  },
+];
+
 export const Nav = () => {
   const [navOpen, setNavOpen] = useState(false);
 
@@ -27,38 +57,28 @@ export const Nav = () => {
       <div className={`l-header__nav-wrap ${navOpen ? "is--open" : ""}`}>
         <div className="l-header__nav-inner">
           <ul className="l-header__nav-list">
-            <li className="l-header__nav-item">
-              <Link href={"/"} onClick={navClose}>
-                HOME
-              </Link>
-            </li>
-            <li className="l-header__nav-item">
-              <Link href={"/about"} onClick={navClose}>
-                ABOUT
-              </Link>
-            </li>
-            <li className="l-header__nav-item">
-              <Link href={"/works"} onClick={navToggle}>
-                WORKS
-              </Link>
-              <ul className="l-header__nav-drawer">
-                <li className="l-header__nav-drawer-item">
-                  <Link href={""} onClick={navToggle}>
-                    Web Application
-                  </Link>
-                </li>
-                <li className="l-header__nav-drawer-item">
-                  <Link href={""} onClick={navToggle}>
-                    Web Site
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="l-header__nav-item is--contact">
-              <Link href={"mailto:tanaka.anji14@gmail.com"} onClick={navToggle}>
-                CONTACT
-              </Link>
-            </li>
+            {NavItems.map((item) => (
+              <li
+                className={`l-header__nav-item ${item.arrow ? "is--arrow" : undefined}`}
+                key={item.text}
+              >
+                <Link href={item.url} onClick={navClose}>
+                  {item.text}
+                </Link>
+
+                {item.drawers ? (
+                  <ul className="l-header__nav-drawer">
+                    {item.drawers.map((drawer) => (
+                      <li className="l-header__nav-drawer-item" key={drawer.text}>
+                        <Link href={drawer.url} onClick={navToggle}>
+                          {drawer.text}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : undefined}
+              </li>
+            ))}
           </ul>
           <div className="l-header__nav-bottom">
             <div className="l-header__sns">

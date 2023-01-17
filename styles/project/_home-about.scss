@@ -1,7 +1,11 @@
 @use "../global" as global;
 
 .p-home-about {
-  margin-top: 125px;
+  margin-top: 90px;
+
+  @include global.mq("md") {
+    margin-top: 125px;
+  }
 }
 
 .p-home-about__row {
@@ -21,29 +25,36 @@
 }
 
 .p-home-about__contents {
-  width: 100%;
+  margin-top: 30px;
+
+  @include global.mq("md") {
+    width: 100%;
+  }
 
   @include global.mq("lg") {
+    margin-top: 0;
     max-width: calc(100% - 360px);
   }
 }
 
 .p-home-about__text {
-  line-height: 1.5;
-  font-size: 22px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.03em;
 
   @include global.mq("md") {
-    margin-top: 30px;
-  }
-
-  @include global.mq("lg") {
-    margin-top: 0;
+    line-height: 1.5;
+    font-size: 22px;
   }
 }
 
 .p-home-about__button-wrap {
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
+
+  @include global.mq("md") {
+    margin-top: 50px;
+  }
 
   @include global.mq("lg") {
     text-align: right;

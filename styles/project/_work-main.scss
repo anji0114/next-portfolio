@@ -5,11 +5,13 @@
 }
 
 .p-work-main__contents {
-  *:first-child {
+  > *:first-child,
+  > *:first-child * {
     margin-top: 0;
   }
 
-  *:first-child {
+  > *:last-child,
+  > *:last-child * {
     margin-bottom: 0;
   }
 
@@ -63,18 +65,10 @@
   }
 
   // 画像
-  figure {
-    margin: 50px 0;
-  }
-
-  figcaption {
-    margin-top: 15px;
-    text-align: center;
-  }
-
   img {
+    display: block;
     width: 100%;
-    height: auto;
+    margin: 50px 0;
   }
 }
 

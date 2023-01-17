@@ -1,10 +1,10 @@
-import { Button } from "@/components/Button";
-import Image from "next/image";
-import thumbnail from "images/home/works.jpg";
-import { client } from "src/libs/client";
 import Link from "next/link";
 
-const worksSlug = ({ title, type, description, details }) => {
+import { client } from "src/libs/client";
+import { Button } from "@/components/Button";
+import { ConvertDate } from "@/components/ConvertDate";
+
+const worksSlug = ({ title, type, publishDate, description, details, content }) => {
   return (
     <div className="p-work">
       <div className="l-container">
@@ -12,7 +12,9 @@ const worksSlug = ({ title, type, description, details }) => {
           <div className="p-work-top">
             <div className="p-work-top__heading">
               <div className="p-work-top__title">{title}</div>
-              <time className="p-work-top__date">2022.01.11</time>
+              <time className="p-work-top__date">
+                <ConvertDate time={publishDate} />
+              </time>
             </div>
             <ul className="p-work-top__categories">
               <li className="p-work-top__category">
@@ -49,50 +51,9 @@ const worksSlug = ({ title, type, description, details }) => {
               ))}
             </div>
           </div>
+
           <main className="p-work-main">
-            <div className="p-work-main__contents">
-              <figure>
-                <Image src={thumbnail} alt="サムネイル" />
-              </figure>
-              <h2>はじめに</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate id sequi,
-                delectus earum ducimus placeat ullam, nulla tempora assumenda provident cum
-                voluptates ab blanditiis officiis! Neque quam voluptatum corrupti blanditiis. Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Voluptate id sequi, delectus
-                earum ducimus placeat ullam, nulla tempora assumenda provident cum voluptates ab
-                blanditiis officiis! Neque quam voluptatum corrupti blanditiis.
-              </p>
-              <h2>開発について</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate id sequi,
-                delectus earum ducimus placeat ullam, nulla tempora assumenda provident cum
-                voluptates ab <a href="">blanditiis</a> officiis! Neque quam voluptatum corrupti
-              </p>
-              <p>
-                blanditiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate id
-                sequi, delectus earum ducimus placeat ullam, nulla tempora assumenda provident cum
-                voluptates ab blanditiis officiis! Neque quam voluptatum corrupti blanditiis.
-              </p>
-              <ul>
-                <li>これはリストが入ります</li>
-                <li>これはリストが入りますこれはリストが入ります</li>
-                <li>
-                  文章これはリストが入りますこれはリストが入りますこれはリストが入りますこれはリストが入ります
-                </li>
-              </ul>
-              <p>
-                tempora assumenda provident cum voluptates ab blanditiis officiis! Neque quam
-                voluptatum corrupti blanditiis. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Voluptate id sequi, delectus earum ducimus placeat ullam, nulla tempora
-                assumenda provident cum voluptates ab blanditiis officiis! Neque quam voluptatum
-                corrupti blanditiis.
-              </p>
-              <figure>
-                <Image src={thumbnail} alt="サムネイル" />
-                <figcaption>PC画像</figcaption>
-              </figure>
-            </div>
+            <div className="p-work-main__contents" dangerouslySetInnerHTML={{ __html: content }} />
             <div className="p-works-main__button-wrap">
               <Button url={"/works"}>View Works</Button>
             </div>

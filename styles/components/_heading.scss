@@ -1,12 +1,16 @@
 @use "../global" as global;
 
 .c-heading01 {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 700;
   font-family: global.$font-en;
 
   span {
     display: inline-block;
+  }
+
+  @include global.mq("md") {
+    font-size: 60px;
   }
 }
 

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "date-fns": "^2.29.3",
     "devicon": "^2.15.1",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",

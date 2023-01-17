@@ -13,15 +13,16 @@
 }
 
 .p-home-works__articles {
-  display: flex;
-  flex-wrap: wrap;
+  @include global.mq("md") {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .p-home-works__article {
   position: relative;
   background-color: #fff;
   border-radius: 8px;
-  width: calc((100% - 30px * 2) / 3);
   transition: box-shadow 0.3s;
 
   @include global.mq("md") {
