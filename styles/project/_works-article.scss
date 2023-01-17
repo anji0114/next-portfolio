@@ -1,9 +1,11 @@
 @use "../global" as global;
 
 .p-works-articles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @include global.mq("md") {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   @include global.mq("lg") {
     display: block;
@@ -18,8 +20,16 @@
   border: 1px solid #eeeeee;
   transition: box-shadow 0.4s ease, border 0.4s ease;
 
+  &:not(:first-of-type) {
+    margin-top: 20px;
+  }
+
   @include global.mq("md") {
     width: calc((100% - 30px) / 2);
+
+    &:not(:first-of-type) {
+      margin-top: 0;
+    }
 
     &:nth-of-type(n + 3) {
       margin-top: 30px;
@@ -49,7 +59,6 @@
 }
 
 .p-works-article:hover {
-  box-shadow: 0px 8px 12px #f0f0f0;
   box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.3);
   border: 1px solid #fff;
 
@@ -153,11 +162,17 @@
   margin-top: 10px;
   font-size: 14px;
   font-weight: 500;
-  line-height: 2;
+  line-height: 1.75;
+  min-height: 49px;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   display: -webkit-box;
   overflow: hidden;
+
+  @include global.mq("md") {
+    line-height: 2;
+    min-height: 56px;
+  }
 
   @include global.mq("xl") {
     -webkit-line-clamp: 3;

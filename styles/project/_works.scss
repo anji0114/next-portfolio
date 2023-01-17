@@ -1,11 +1,19 @@
 @use "../global" as global;
 
 .p-works {
-  padding-top: 160px;
+  padding-top: 120px;
+
+  @include global.mq("md") {
+    padding-top: 160px;
+  }
 }
 
 .p-works__contents {
-  margin-top: 90px;
+  margin-top: 40px;
+
+  @include global.mq("md") {
+    margin-top: 90px;
+  }
 
   @include global.mq("lg") {
     display: flex;
@@ -20,7 +28,11 @@
 }
 
 .p-works__main {
-  margin-top: 50px;
+  margin-top: 40px;
+
+  @include global.mq("md") {
+    margin-top: 50px;
+  }
 
   @include global.mq("lg") {
     margin-top: 0;
