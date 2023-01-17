@@ -2,7 +2,13 @@
 
 .p-about-skill {
   position: relative;
-  padding: 35px 0 48px;
+  margin-top: 90px;
+  padding-bottom: 60px;
+
+  @include global.mq("md") {
+    margin-top: 35px;
+    padding-bottom: 48px;
+  }
 }
 
 .p-about-skill__bg {
@@ -32,7 +38,10 @@
 
 .p-about-skill__prerequisite {
   margin-top: 20px;
-  padding-left: 15px;
+
+  @include global.mq("md") {
+    padding-left: 15px;
+  }
 }
 
 .p-about-skill__prerequisite-title {
@@ -86,27 +95,52 @@
 
 .p-about-skill__prerequisite-contents-wrap {
   margin-top: 20px;
+  padding-left: 3px;
   overflow: hidden;
   transition: height 0.5s;
+
+  @include global.mq("md") {
+    padding-left: 0;
+  }
 }
 
 .p-about-skill__prerequisite-list {
-  display: flex;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eeeeee;
 
   &:not(:first-of-type) {
-    margin-top: 10px;
+    margin-top: 15px;
+  }
+
+  @include global.mq("md") {
+    display: flex;
+    padding-bottom: 0;
+    border-bottom: none;
+
+    &:not(:first-of-type) {
+      margin-top: 10px;
+    }
   }
 }
 
 .p-about-skill__prerequisite-rate {
-  width: 110px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
+
+  @include global.mq("md") {
+    font-weight: 400;
+    width: 110px;
+  }
 }
 
 .p-about-skill__prerequisite-description {
-  width: calc(100% - 110px);
   font-size: 14px;
+  margin-top: 8px;
+
+  @include global.mq("md") {
+    margin-top: 0;
+    width: calc(100% - 110px);
+  }
 }
 
 // contents
@@ -115,16 +149,28 @@
 }
 
 .p-about-skill__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @include global.mq("md") {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .p-about-skill__item {
-  width: calc((100% - 40px) / 2);
-
-  &:nth-of-type(n + 3) {
+  &:not(:first-of-type) {
     margin-top: 20px;
+  }
+
+  @include global.mq("md") {
+    width: calc((100% - 40px) / 2);
+
+    &:not(:first-of-type) {
+      margin-top: 0;
+    }
+
+    &:nth-of-type(n + 3) {
+      margin-top: 20px;
+    }
   }
 
   @include global.mq("lg") {
@@ -138,7 +184,7 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  padding: 17.5px 20px 17px 40px;
+  padding: 15.5px 20px 15px 30px;
   border-radius: 100px;
   border: 1px solid #ededef;
   background-color: #fff;
@@ -170,28 +216,44 @@
 .p-about-skill__item-icon {
   display: inline-block;
   i {
-    font-size: 30px;
+    font-size: 20px;
+  }
+
+  @include global.mq("md") {
+    i {
+      font-size: 30px;
+    }
   }
 }
 
 .p-about-skill__item-text {
   display: inline-block;
-  margin-left: 20px;
-  font-size: 20px;
+  margin-left: 15px;
+  font-size: 16px;
   font-family: global.$font-en;
   letter-spacing: 0.02em;
+
+  @include global.mq("md") {
+    margin-left: 20px;
+    font-size: 20px;
+  }
 }
 
 .p-about-skill__item-rate {
   padding-top: 5px;
-  font-size: 18px;
+  font-size: 14px;
   font-family: global.$font-en;
+
+  @include global.mq("md") {
+    font-size: 18px;
+  }
 }
 
 .p-about-skill__item-url {
   margin-top: 5px;
-  padding-left: 30px;
-  font-size: 14px;
+  padding-left: 20px;
+  font-size: 12px;
+  min-height: 5px;
   letter-spacing: 0.02em;
 
   a {
@@ -203,9 +265,7 @@
   }
 
   @include global.mq("md") {
-    font-size: 12px;
     min-height: 15px;
-    padding-left: 20px;
   }
 
   @include global.mq("lg") {

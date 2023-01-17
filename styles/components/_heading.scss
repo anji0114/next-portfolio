@@ -22,9 +22,14 @@
 }
 
 .c-heading02 {
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 500;
   font-family: global.$font-en;
+
+  @include global.mq("md") {
+    font-size: 42px;
+    font-weight: 700;
+  }
 }
 
 .c-heading02__text {
