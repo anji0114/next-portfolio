@@ -1,11 +1,10 @@
 @use "../global" as global;
 
-.p-contact {
-}
-
 .p-contact__link {
   position: relative;
   display: block;
+  padding: 50px 0;
+
   width: 100%;
   text-align: center;
   background-color: global.$c-base;
@@ -24,13 +23,15 @@
   position: relative;
   z-index: 2;
   display: inline-block;
-  padding-right: 87px;
+  padding-right: 50px;
+  font-size: 50px;
   font-weight: 700;
   font-family: global.$font-en;
   letter-spacing: 0.05em;
 
   @include global.mq("md") {
     font-size: 70px;
+    padding-right: 87px;
   }
 
   @include global.mq("lg") {
@@ -43,7 +44,7 @@
   top: 50%;
   right: 0;
   display: inline-block;
-  width: 40px;
+  width: 32px;
   height: 4px;
   border-radius: 4px;
   transform: translateY(calc(-50% + 2px)) rotate(-45deg);
@@ -53,18 +54,35 @@
     content: "";
     position: absolute;
     right: -1px;
-    width: 18px;
+    width: 15px;
     height: 4px;
     border-radius: 4px;
   }
 
   &::before {
     transform: rotate(45deg);
-    top: -6px;
+    top: -5px;
   }
 
   &::after {
     transform: rotate(-45deg);
-    top: 6px;
+    top: 5px;
+  }
+
+  @include global.mq("md") {
+    width: 40px;
+
+    &::before,
+    &::after {
+      width: 18px;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      top: 6px;
+    }
   }
 }

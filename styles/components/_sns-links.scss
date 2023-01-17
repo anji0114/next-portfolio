@@ -1,5 +1,12 @@
+@use "../global" as global;
+
 .c-sns__links {
   display: flex;
+  justify-content: center;
+
+  @include global.mq("md") {
+    justify-content: flex-start;
+  }
 }
 
 .c-sns__icon {

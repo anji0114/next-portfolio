@@ -2,26 +2,34 @@
 .p-home-mv__wrap {
   position: relative;
   overflow: hidden;
-  padding: 220px 0;
+  padding: 140px 0 260px;
   max-width: 1400px;
   margin: 0 auto;
 
   @include global.mq("md") {
-    padding: 190px 0 140px;
+    padding: 190px 0 120px;
   }
 
   @include global.mq("lg") {
+    padding: 220px 0 170px;
+  }
+
+  @include global.mq("xl") {
     padding: 220px 0;
   }
 }
 
 .p-home-mv__inner {
-  max-width: 1200px;
-  padding: 0 30px;
+  padding: 0 20px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include global.mq("md") {
+    padding: 0 30px;
+    max-width: 1200px;
+  }
 }
 
 .p-home-mv__content {
@@ -30,7 +38,7 @@
 }
 
 .p-home-mv__title {
-  font-size: 100px;
+  font-size: 52px;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   line-height: 1;
@@ -111,8 +119,9 @@
 }
 
 .p-home-mv__text {
-  margin-top: 25px;
-  font-size: 30px;
+  margin-top: 20px;
+  padding-left: 3px;
+  font-size: 24px;
   letter-spacing: 0.02em;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
@@ -126,6 +135,8 @@
 
   @include global.mq("md") {
     font-size: 26px;
+    margin-top: 25px;
+    padding-left: 0;
   }
 
   @include global.mq("lg") {
@@ -135,9 +146,10 @@
 
 .p-home-mv__image {
   position: absolute;
-  top: 20px;
+  top: calc(100% - 20px);
   right: -20px;
-  width: 800px;
+  width: 100vw;
+  transform: translateY(-100%);
 
   img {
     width: 100%;
@@ -146,7 +158,9 @@
 
   @include global.mq("md") {
     width: 680px;
+    top: 20px;
     right: -10px;
+    transform: translateY(0);
   }
 
   @include global.mq("lg") {
@@ -161,9 +175,13 @@
 
 .p-home-mv__scroll {
   position: absolute;
-  bottom: 10px;
+  bottom: 100px;
+  left: 20px;
 
-  left: 30px;
+  @include global.mq("md") {
+    bottom: 10px;
+    left: 30px;
+  }
 
   @include global.mq("xl") {
     left: calc((100% - 1140px) / 2 + 2px);

@@ -22,8 +22,12 @@
   display: flex;
   align-items: center;
   max-width: 1200px;
-  padding: 20px 30px 23px;
+  padding: 20px 20px 23px;
   margin: 0 auto;
+
+  @include global.mq("md") {
+    padding: 20px 30px 23px;
+  }
 }
 
 .l-header__nav {
@@ -34,12 +38,17 @@
   position: relative;
   z-index: 2;
   display: block;
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   border: 1px solid #fcfcfc;
   border-radius: 50%;
   background: #fff;
   box-shadow: inset 5px 5px 7px #f0f0f0, inset -5px -5px 7px #ffffff;
+
+  @include global.mq("md") {
+    width: 55px;
+    height: 55px;
+  }
 }
 
 .l-header__button-wrap {
@@ -47,8 +56,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 25px;
-  height: 18px;
+  width: 22px;
+  height: 15px;
+
+  @include global.mq("md") {
+    width: 25px;
+    height: 18px;
+  }
 }
 
 .l-header__button span {
@@ -176,7 +190,7 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 100px 50px 50px;
+  padding: 100px 40px 50px;
   margin: 0 auto;
 
   @include global.mq("lg") {
@@ -194,7 +208,7 @@
   }
 
   > a {
-    font-size: 60px;
+    font-size: 40px;
     line-height: 1;
     @extend %gradient-text;
     transition: opacity 0.3s;
@@ -203,11 +217,17 @@
   > a:hover {
     opacity: 0.8;
   }
+
+  @include global.mq("md") {
+    > a {
+      font-size: 60px;
+    }
+  }
 }
 
 .l-header__nav-item.is--arrow a {
   position: relative;
-  padding-right: 33px;
+  padding-right: 28px;
 
   &::after {
     content: "";
@@ -215,12 +235,21 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
     background-image: url(../../images/icons/icon_arrow03.svg);
+  }
+
+  @include global.mq("md") {
+    padding-right: 33px;
+
+    &::after {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
@@ -236,8 +265,8 @@
 
   > a {
     position: relative;
-    padding-left: 30px;
-    font-size: 30px;
+    padding-left: 25px;
+    font-size: 24px;
     line-height: 1;
     @extend %gradient-text;
     transition: opacity 0.3s;
@@ -249,7 +278,7 @@
     top: 50%;
     left: 0;
     transform: calc(-50% - 2px);
-    width: 20px;
+    width: 15px;
     height: 3px;
     background-image: linear-gradient(#666, #1a1a1a);
   }
@@ -257,17 +286,35 @@
   > a:hover {
     opacity: 0.8;
   }
+
+  @include global.mq("md") {
+    > a {
+      font-size: 30px;
+      padding-left: 30px;
+    }
+
+    > a::before {
+      width: 20px;
+    }
+  }
 }
 
 // bottom
 .l-header__nav-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  @include global.mq("md") {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 
 .l-header__privacy {
   font-size: 14px;
   color: #444;
   font-family: global.$font-en;
+  display: none;
+
+  @include global.mq("md") {
+    display: block;
+  }
 }
