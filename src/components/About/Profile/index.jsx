@@ -1,11 +1,11 @@
 const ProfileContents = [
   {
-    title: "田中 杏直　ANJI TANAKA",
+    title: "田中 杏直　ANJ TANAKA",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit dolorem blanditiis quidem ullam dolore rerum a. Quae enim, officia ullam, iste amet rem hic dicta molestias odio ex, provident ipsum!",
   },
   {
-    title: "田中 杏直　ANJI TANAKA",
+    title: "田中 杏直　ANJI ANAKA",
     description:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit dolorem blanditiis quidem ullam dolore rerum a. Quae enim, officia ullam, iste amet rem hic dicta molestias odio ex, provident ipsum!",
   },

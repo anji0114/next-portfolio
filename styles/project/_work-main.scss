@@ -1,10 +1,20 @@
 @use "../global" as global;
 
 .p-work-main {
-  margin-top: 50px;
+  margin-top: 40px;
+
+  @include global.mq("md") {
+    margin-top: 50px;
+  }
 }
 
 .p-work-main__contents {
+  font-size: 14px;
+
+  @include global.mq("md") {
+    font-size: 16px;
+  }
+
   > *:first-child,
   > *:first-child * {
     margin-top: 0;
@@ -16,15 +26,24 @@
   }
 
   h2 {
-    margin: 50px 0 25px;
-    font-size: 26px;
+    margin: 40px 0 20px;
+    font-size: 22px;
     font-weight: 500;
+
+    @include global.mq("md") {
+      margin: 50px 0 25px;
+      font-size: 26px;
+    }
   }
 
   // 文章
   p {
-    margin-top: 20px;
+    margin-top: 15px;
     line-height: 2;
+
+    @include global.mq("md") {
+      margin-top: 20px;
+    }
   }
 
   a {
@@ -40,12 +59,16 @@
   // list
   ul {
     margin: 20px 0;
-    padding-left: 15px;
+    padding-left: 10px;
+
+    @include global.mq("md") {
+      padding-left: 15px;
+    }
   }
 
   li {
     position: relative;
-    padding-left: 15px;
+    padding-left: 12px;
     line-height: 1.75;
 
     &:not(:first-of-type) {
@@ -55,12 +78,22 @@
     &::before {
       content: "";
       position: absolute;
-      top: 13px;
+      top: 12px;
       left: 0;
-      width: 4px;
-      height: 4px;
+      width: 3px;
+      height: 3px;
       border-radius: 50%;
       background-color: global.$c-black;
+    }
+
+    @include global.mq("md") {
+      padding-left: 15px;
+
+      &::before {
+        top: 13px;
+        width: 4px;
+        height: 4px;
+      }
     }
   }
 
@@ -68,11 +101,19 @@
   img {
     display: block;
     width: 100%;
-    margin: 50px 0;
+    margin: 40px 0;
+
+    @include global.mq("md") {
+      margin: 50px 0;
+    }
   }
 }
 
 .p-works-main__button-wrap {
-  margin-top: 75px;
+  margin-top: 50px;
   text-align: center;
+
+  @include global.mq("md") {
+    margin-top: 75px;
+  }
 }

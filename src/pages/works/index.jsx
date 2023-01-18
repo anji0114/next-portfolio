@@ -19,7 +19,6 @@ const Works = () => {
             </aside>
             <main className="p-works__main">
               <Articles />
-              <div className="p-works-pagination"></div>
             </main>
           </div>
         </div>

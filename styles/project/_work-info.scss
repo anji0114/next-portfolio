@@ -1,36 +1,63 @@
 @use "../global" as global;
 
 .p-work-info {
-  margin-top: 40px;
+  margin-top: 30px;
+
+  @include global.mq("md") {
+    margin-top: 40px;
+  }
 }
 
 .p-work-info__content {
-  padding: 40px 35px;
-  border-radius: 20px;
+  padding: 10px 0;
+  border-radius: 10px;
   border: 1px solid #eeeeee;
   background-color: #fff;
+
+  @include global.mq("md") {
+    padding: 40px 35px;
+    border-radius: 20px;
+  }
 }
 
 .p-work-info__list {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0 19px;
-  border-bottom: 1px solid #eeeeee;
+  padding: 15px;
 
-  &:first-of-type {
-    padding-top: 0;
+  &:not(:first-of-type) {
+    border-top: 1px solid #eee;
+  }
+
+  @include global.mq("md") {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 19px;
+    border-bottom: 1px solid #eeeeee;
+
+    &:not(:first-of-type) {
+      border-top: none;
+    }
+
+    &:first-of-type {
+      padding-top: 0;
+    }
   }
 }
 
 .p-work-info__title {
-  width: 130px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.03em;
+
+  @include global.mq("md") {
+    width: 130px;
+    font-size: 16px;
+  }
 }
 
 .p-work-info__description {
-  width: calc(100% - 130px - 10px);
+  margin-top: 5px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.03em;
@@ -43,5 +70,11 @@
     &:hover {
       opacity: 0.7;
     }
+  }
+
+  @include global.mq("md") {
+    margin-top: 0;
+    width: calc(100% - 130px - 10px);
+    font-style: 16px;
   }
 }

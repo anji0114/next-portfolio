@@ -1,30 +1,14 @@
 @use "../global" as global;
 
 .p-work {
-  padding-top: 160px;
+  padding-top: 120px;
+
+  @include global.mq("md") {
+    padding-top: 160px;
+  }
 }
 
 .p-work__inner {
   max-width: 900px;
   margin: 0 auto;
-}
-
-.p-work-top__heading {
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
-}
-
-.p-work-top__title {
-  font-size: 30px;
-  font-weight: 500;
-  letter-spacing: 0.025em;
-  margin-right: 30px;
-}
-
-.p-work-top__date {
-  margin-top: 5px;
-  padding-bottom: 5px;
-  font-weight: 500;
-  color: #777777;
 }
