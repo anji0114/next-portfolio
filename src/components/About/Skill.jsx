@@ -1,7 +1,7 @@
-import { SkillList } from "@/components/About/Skill/SkillList";
-import { SKillPrerequisite } from "@/components/About/Skill/SkillPrerequisite";
+import { SkillList } from "@/components/About/SkillList";
+import { SKillPrerequisite } from "@/components/About/SkillPrerequisite";
 
-export const Skill = () => {
+export const AboutSkill = () => {
   return (
     <div className="p-about-skill">
       <div className="p-about-skill__wrap">

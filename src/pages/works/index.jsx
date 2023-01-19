@@ -1,7 +1,10 @@
-import { Articles } from "@/components/Works/Articles";
+import { WorksArticle } from "@/components/Works/Article";
 import { Categories } from "@/components/Works/Categories";
+import { getAllWorks } from "src/libs/client";
 
-const Works = () => {
+const Works = (props) => {
+  const { works } = props;
+
   return (
     <div className="p-works">
       <div className="p-works__wrap">
@@ -18,7 +21,11 @@ const Works = () => {
               <Categories />
             </aside>
             <main className="p-works__main">
-              <Articles />
+              <div className="p-works-articles">
+                {works.map((work) => (
+                  <WorksArticle work={work} key={work.id} />
+                ))}
+              </div>
             </main>
           </div>
         </div>
@@ -28,3 +35,11 @@ const Works = () => {
 };
 
 export default Works;
+
+export const getStaticProps = async () => {
+  const works = await getAllWorks();
+
+  return {
+    props: { works: works },
+  };
+};

@@ -1,6 +1,7 @@
-import { SnsLinks } from "@/components/SnsLinks";
 import Link from "next/link";
 import { useState } from "react";
+
+import { SnsLinks } from "@/components/SnsLinks";
 
 const NavItems = [
   {
@@ -32,7 +33,7 @@ const NavItems = [
   },
 ];
 
-export const Nav = () => {
+export const HeaderNav = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   const navToggle = () => {
@@ -65,7 +66,6 @@ export const Nav = () => {
                 <Link href={item.url} onClick={navClose}>
                   {item.text}
                 </Link>
-
                 {item.drawers ? (
                   <ul className="l-header__nav-drawer">
                     {item.drawers.map((drawer) => (

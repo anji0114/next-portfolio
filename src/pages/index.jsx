@@ -1,16 +1,19 @@
-import { Mv } from "@/components/Home/Mv";
-import { About } from "@/components/Home/About";
-import { Works } from "@/components/Home/Works";
-import { Repository } from "@/components/Home/Repository";
-import { client } from "src/libs/client";
+import { getAllWorks } from "src/libs/client";
+
+import { HomeMv } from "@/components/Home/Mv";
+import { HomeAbout } from "@/components/Home/About";
+import { HomeWorks } from "@/components/Home/Works";
+import { HomeRepository } from "@/components/Home/Repository";
 
 const Home = (props) => {
+  const { works } = props;
+
   return (
     <div className="p-index">
-      <Mv />
-      <About />
-      <Works works={props} />
-      <Repository />
+      <HomeMv />
+      <HomeAbout />
+      <HomeWorks works={works} />
+      <HomeRepository />
     </div>
   );
 };
@@ -18,9 +21,9 @@ const Home = (props) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const data = await client.getList({ endpoint: "works" });
+  const works = await getAllWorks(6);
 
   return {
-    props: data,
+    props: { works: works },
   };
 };

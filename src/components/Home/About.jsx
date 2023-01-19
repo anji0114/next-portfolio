@@ -1,6 +1,6 @@
 import { Button } from "@/components/Button";
 
-export const About = () => {
+export const HomeAbout = () => {
   return (
     <section className="p-home-about">
       <div className="l-container">

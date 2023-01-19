@@ -1,10 +1,11 @@
-import Link from "next/link";
-
 import { client } from "src/libs/client";
+
 import { Button } from "@/components/Button";
 import { ConvertDate } from "@/components/ConvertDate";
+import { WorkCategories } from "@/components/Work/Categories";
+import { WorkInfo } from "@/components/Work/Info";
 
-const worksSlug = ({ title, type, publishDate, description, details, content }) => {
+const worksSlug = ({ title, type, publishDate, description, details, content, categories }) => {
   return (
     <div className="p-work">
       <div className="l-container">
@@ -16,41 +17,11 @@ const worksSlug = ({ title, type, publishDate, description, details, content }) 
                 <ConvertDate time={publishDate} />
               </time>
             </div>
-            <ul className="p-work-top__categories">
-              <li className="p-work-top__category">
-                <a href="">Next.js</a>
-              </li>
-              <li className="p-work-top__category">
-                <a href="">個人開発</a>
-              </li>
-              <li className="p-work-top__category">
-                <a href="">Web Application</a>
-              </li>
-            </ul>
+            <WorkCategories categories={categories} />
             <p className="p-work-top__description">{description}</p>
           </div>
-          <div className="p-work-info">
-            <div className="p-work-info__content">
-              <dl className="p-work-info__list">
-                <dt className="p-work-info__title">種類</dt>
-                <dd className="p-work-info__description">{type}</dd>
-              </dl>
-              {details.map((detail) => (
-                <dl className="p-work-info__list" key={detail.title}>
-                  <dt className="p-work-info__title">{detail.title}</dt>
-                  <dd className="p-work-info__description">
-                    {detail.link ? (
-                      <Link href={detail.text} target="_blank">
-                        {detail.text}
-                      </Link>
-                    ) : (
-                      detail.text
-                    )}
-                  </dd>
-                </dl>
-              ))}
-            </div>
-          </div>
+
+          <WorkInfo type={type} details={details} />
 
           <main className="p-work-main">
             <div className="p-work-main__contents" dangerouslySetInnerHTML={{ __html: content }} />

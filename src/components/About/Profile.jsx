@@ -16,7 +16,7 @@ const ProfileContents = [
   },
 ];
 
-export const Profile = () => {
+export const AboutProfile = () => {
   return (
     <div className="p-about-profile">
       <div className="l-container">

@@ -1,6 +1,7 @@
-// import GithubIcon from "images/icons/icon_github.svg";
+import GithubIcon from "images/icons/icon_github.svg";
+import Image from "next/image";
 
-export const RepositoryItem = () => {
+export const HomeRepositoryItem = () => {
   return (
     <li className="p-home-repository__item">
       <h3 className="p-home-repository__name">next-portfolio</h3>
@@ -11,7 +12,7 @@ export const RepositoryItem = () => {
       <div className="p-home-repository__info">
         <p className="p-home-repository__lang">JavaScript</p>
         <span className="p-home-repository__icon">
-          {/* <GithubIcon /> */}
+          <Image src={GithubIcon} alt="git hub" />
         </span>
       </div>
       <a href="" className="c-link__overlay"></a>

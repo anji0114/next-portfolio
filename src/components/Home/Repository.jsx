@@ -1,7 +1,7 @@
-import { RepositoryItem } from "@/components/Home/Repository/RepositoryItem";
+import { HomeRepositoryItem } from "@/components/Home/RepositoryItem";
 import { Button } from "@/components/Button";
 
-export const Repository = () => {
+export const HomeRepository = () => {
   return (
     <section className="p-home-repository">
       <div className="l-container">
@@ -13,12 +13,12 @@ export const Repository = () => {
         </h2>
         <div className="p-home-repository__contents">
           <ul className="p-home-repository__list">
-            <RepositoryItem />
-            <RepositoryItem />
-            <RepositoryItem />
-            <RepositoryItem />
-            <RepositoryItem />
-            <RepositoryItem />
+            <HomeRepositoryItem />
+            <HomeRepositoryItem />
+            <HomeRepositoryItem />
+            <HomeRepositoryItem />
+            <HomeRepositoryItem />
+            <HomeRepositoryItem />
           </ul>
           <div className="p-home-repository__button-wrap">
             <Button url={"/works"}>View Repository</Button>

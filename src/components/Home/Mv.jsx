@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "images/icons/logo_mv.svg";
 
-export const Mv = () => {
+export const HomeMv = () => {
   return (
     <div className="p-home-mv">
       <div className="p-home-mv__wrap">

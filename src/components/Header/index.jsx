@@ -1,4 +1,4 @@
-import { Nav } from "@/components/Header/Nav";
+import { HeaderNav } from "@/components/Header/Nav";
 import { Logo } from "@/components/Logo";
 
 export const Header = () => {
@@ -6,7 +6,7 @@ export const Header = () => {
     <header className="l-header">
       <div className="l-header__inner">
         <Logo />
-        <Nav />
+        <HeaderNav />
       </div>
     </header>
   );

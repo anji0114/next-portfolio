@@ -1,6 +1,6 @@
-import { Mv as AboutMv } from "@/components/About/Mv";
-import { Profile } from "@/components/About/Profile";
-import { Skill } from "@/components/About/Skill";
+import { AboutMv } from "@/components/About/Mv";
+import { AboutSkill } from "@/components/About/Skill";
+import { AboutProfile } from "@/components/About/Profile";
 
 const About = () => {
   return (
@@ -8,10 +8,10 @@ const About = () => {
       {/* about-mv */}
       <AboutMv />
       {/* p-about-skill */}
-      <Skill />
+      <AboutSkill />
 
       {/* p-profile */}
-      <Profile />
+      <AboutProfile />
     </div>
   );
 };
