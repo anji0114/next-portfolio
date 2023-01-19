@@ -16,3 +16,11 @@ export const getAllWorks = async (limit = 100) => {
 
   return works.contents;
 };
+
+export const getAllCategory = async () => {
+  const categories = await client.get({
+    endpoint: "categories",
+  });
+
+  return categories.contents;
+};

@@ -1,11 +1,11 @@
-import { client } from "src/libs/client";
-
+import { client, getAllWorks } from "src/libs/client";
 import { Button } from "@/components/Button";
 import { ConvertDate } from "@/components/ConvertDate";
 import { WorkCategories } from "@/components/Work/Categories";
 import { WorkInfo } from "@/components/Work/Info";
 
-const worksSlug = ({ title, type, publishDate, description, details, content, categories }) => {
+const WorksId = (props) => {
+  const { title, type, publishDate, description, details, content, categories } = props;
   return (
     <div className="p-work">
       <div className="l-container">
@@ -36,8 +36,8 @@ const worksSlug = ({ title, type, publishDate, description, details, content, ca
 };
 
 export const getStaticPaths = async () => {
-  const data = await client.getList({ endpoint: "works" });
-  const ids = data.contents.map((content) => `/works/${content.id}`);
+  const data = await getAllWorks();
+  const ids = data.map((content) => `/works/${content.id}`);
 
   return {
     paths: ids,
@@ -59,4 +59,4 @@ export const getStaticProps = async (context) => {
   };
 };
 
-export default worksSlug;
+export default WorksId;
