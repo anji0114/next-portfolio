@@ -4,7 +4,7 @@ export const WorkCategories = ({ categories }) => {
   return (
     <ul className="p-work-top__categories">
       {categories.map(({ id, name }) => (
-        <li className="p-work-top__category">
+        <li className="p-work-top__category" key={id}>
           <Link href={`/works/category/${id}`}>{name}</Link>
         </li>
       ))}
