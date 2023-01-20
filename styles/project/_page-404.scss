@@ -1,0 +1,30 @@
+@use "../global" as global;
+
+.p-404 {
+}
+
+.p-404__wrap {
+  padding-top: 160px;
+  min-height: calc(100vh - 360px);
+  display: flex;
+  align-items: center;
+}
+
+.p-404__text {
+  text-align: center;
+  font-size: 12px;
+  line-height: 2.2;
+
+  span {
+    display: inline-block;
+  }
+
+  @include global.mq("md") {
+    font-size: 14px;
+  }
+}
+
+.p-404__button-wrap {
+  margin-top: 60px;
+  text-align: center;
+}

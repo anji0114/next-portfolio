@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-export const WorkInfo = ({ type, details }) => {
+export const WorkInfo = (props) => {
+  const { type, details } = props;
   return (
     <div className="p-work-info">
       <div className="p-work-info__content">
