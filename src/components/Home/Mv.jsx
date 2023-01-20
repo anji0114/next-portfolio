@@ -37,7 +37,7 @@ export const HomeMv = () => {
         </div>
         {/* image */}
         <div className="p-home-mv__image">
-          <Image src={logo} alt="sass" />
+          <Image src={logo} alt="logo" width={logo.width} height={logo.height} priority />
         </div>
         <div className="p-home-mv__scroll">
           <span className="p-home-mv__scroll-bar"></span>

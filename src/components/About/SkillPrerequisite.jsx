@@ -3,15 +3,15 @@ import { useEffect, useState } from "react";
 const Prerequisites = [
   {
     rate: "~ 20%",
-    description: "一通りの基礎的な勉強が終了したレベル",
+    description: "勉強中",
   },
   {
     rate: "21% ~ 40%",
-    description: "一通りの基礎的な勉強が終了したレベル",
+    description: "成果物はあるが実務案件はない",
   },
   {
     rate: "41% ~ 60%",
-    description: "一通りの基礎的な勉強が終了したレベル",
+    description: "実務使用経験あり",
   },
   {
     rate: "61% ~ 80%",

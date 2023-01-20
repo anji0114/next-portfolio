@@ -8,13 +8,18 @@ export const SnsLinks = () => {
   return (
     <div className="c-sns__links">
       <SnsLink url="google.com">
-        <Image src={twitterIcon} alt="" />
+        <Image
+          src={twitterIcon}
+          alt="twitter"
+          width={twitterIcon.width}
+          height={twitterIcon.height}
+        />
       </SnsLink>
       <SnsLink url="google.com">
-        <Image src={zennIcon} alt="" />
+        <Image src={zennIcon} alt="zenn" width={zennIcon.width} height={zennIcon.height} />
       </SnsLink>
       <SnsLink url="google.com">
-        <Image src={githubIcon} alt="" />
+        <Image src={githubIcon} alt="github" width={githubIcon.width} height={githubIcon.height} />
       </SnsLink>
     </div>
   );

@@ -1,18 +1,18 @@
 import { AboutMv } from "@/components/About/Mv";
 import { AboutSkill } from "@/components/About/Skill";
 import { AboutProfile } from "@/components/About/Profile";
+import { Meta } from "@/components/Meta";
 
 const About = () => {
   return (
-    <div className="p-about">
-      {/* about-mv */}
-      <AboutMv />
-      {/* p-about-skill */}
-      <AboutSkill />
-
-      {/* p-profile */}
-      <AboutProfile />
-    </div>
+    <>
+      <Meta pageTitle="About" />
+      <div className="p-about">
+        <AboutMv />
+        <AboutSkill />
+        <AboutProfile />
+      </div>
+    </>
   );
 };
 

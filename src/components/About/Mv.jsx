@@ -1,5 +1,5 @@
-import profileImage from "images/img_profile01.jpg";
 import Image from "next/image";
+import profileImage from "images/img_profile01.jpg";
 
 export const AboutMv = () => {
   return (
@@ -13,7 +13,14 @@ export const AboutMv = () => {
               </span>
             </h1>
             <div className="p-about-mv__image">
-              <Image src={profileImage} alt="プロフィール写真" />
+              <Image
+                src={profileImage}
+                alt="プロフィール写真"
+                placeholder="blur"
+                width={profileImage.width}
+                height={profileImage.height}
+                priority
+              />
             </div>
           </div>
         </div>

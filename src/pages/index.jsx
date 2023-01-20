@@ -4,17 +4,21 @@ import { HomeMv } from "@/components/Home/Mv";
 import { HomeAbout } from "@/components/Home/About";
 import { HomeWorks } from "@/components/Home/Works";
 import { HomeRepository } from "@/components/Home/Repository";
+import { Meta } from "@/components/Meta";
 
 const Home = (props) => {
   const { works } = props;
 
   return (
-    <div className="p-index">
-      <HomeMv />
-      <HomeAbout />
-      <HomeWorks works={works} />
-      <HomeRepository />
-    </div>
+    <>
+      <Meta />
+      <div className="p-index">
+        <HomeMv />
+        <HomeAbout />
+        <HomeWorks works={works} />
+        <HomeRepository />
+      </div>
+    </>
   );
 };
 

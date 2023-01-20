@@ -1,10 +1,16 @@
+import { Meta } from "@/components/Meta";
 import { WorksArchive } from "@/components/Works/Archive";
 import { getAllCategory, getAllWorks } from "src/libs/client";
 
 const Works = (props) => {
   const { works, categories } = props;
 
-  return <WorksArchive works={works} categories={categories} />;
+  return (
+    <>
+      <Meta pageTitle="Works" noindex={true} />
+      <WorksArchive works={works} categories={categories} />;
+    </>
+  );
 };
 
 export default Works;
