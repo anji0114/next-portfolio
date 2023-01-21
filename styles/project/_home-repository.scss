@@ -20,6 +20,16 @@
   }
 }
 
+.p-home-repository__text {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.75;
+
+  @include global.mq("md") {
+    font-size: 16px;
+  }
+}
+
 .p-home-repository__list {
   @include global.mq("md") {
     display: flex;
@@ -116,7 +126,7 @@
     top: 50%;
     width: 10px;
     height: 10px;
-    transform: translateY(-50%);
+    transform: translateY(calc(-50% - 1px));
     border-radius: 50%;
     background: linear-gradient(-45deg, global.$c-black-darkest, global.$c-black-light);
   }

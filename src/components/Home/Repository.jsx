@@ -1,4 +1,4 @@
-import { HomeRepositoryItem } from "@/components/Home/RepositoryItem";
+import { RepositoryList } from "@/components/Home/RepositoryList";
 import { Button } from "@/components/Button";
 
 export const HomeRepository = () => {
@@ -12,16 +12,11 @@ export const HomeRepository = () => {
           </span>
         </h2>
         <div className="p-home-repository__contents">
-          <ul className="p-home-repository__list">
-            <HomeRepositoryItem />
-            <HomeRepositoryItem />
-            <HomeRepositoryItem />
-            <HomeRepositoryItem />
-            <HomeRepositoryItem />
-            <HomeRepositoryItem />
-          </ul>
+          <RepositoryList />
           <div className="p-home-repository__button-wrap">
-            <Button url={"/works"}>View Repository</Button>
+            <Button url={"https://github.com/anji0114?tab=repositories"} targetBool={true}>
+              View Repository
+            </Button>
           </div>
         </div>
       </div>

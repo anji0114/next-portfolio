@@ -1,21 +1,20 @@
 import GithubIcon from "images/icons/icon_github.svg";
 import Image from "next/image";
+import Link from "next/link";
 
-export const HomeRepositoryItem = () => {
+export const HomeRepositoryItem = (props) => {
+  const { name, html_url, language, description } = props.repo;
   return (
     <li className="p-home-repository__item">
-      <h3 className="p-home-repository__name">next-portfolio</h3>
-      <p className="p-home-repository__description">
-        Next.js・micro
-        CMSで作成したポートフォリオになります。Next.js・microCMSで作成したポートフォリオになります。
-      </p>
+      <h3 className="p-home-repository__name">{name}</h3>
+      <p className="p-home-repository__description">{description}</p>
       <div className="p-home-repository__info">
-        <p className="p-home-repository__lang">JavaScript</p>
+        <p className="p-home-repository__lang">{language}</p>
         <span className="p-home-repository__icon">
           <Image src={GithubIcon} alt="git hub" />
         </span>
       </div>
-      <a href="" className="c-link__overlay"></a>
+      <Link href={html_url} target="_blank" className="c-link__overlay"></Link>
     </li>
   );
 };
