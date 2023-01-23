@@ -11,8 +11,8 @@
 .p-work-info__content {
   padding: 10px 0;
   border-radius: 10px;
-  border: 1px solid #eeeeee;
-  background-color: #fff;
+  border: 1px solid var(--c-secondary05);
+  background-color: var(--c-secondary01);
 
   @include global.mq("md") {
     padding: 40px 35px;
@@ -24,14 +24,14 @@
   padding: 15px;
 
   &:not(:first-of-type) {
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--c-secondary05);
   }
 
   @include global.mq("md") {
     display: flex;
     justify-content: space-between;
     padding: 20px 0 19px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid var(--c-secondary05);
 
     &:not(:first-of-type) {
       border-top: none;
@@ -63,7 +63,7 @@
   letter-spacing: 0.03em;
 
   a {
-    color: #777777;
+    color: var(--c-primary09);
     text-decoration: underline;
     transition: opacity 0.3s;
 

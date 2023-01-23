@@ -29,7 +29,7 @@
 
 .p-home-works__article {
   position: relative;
-  background-color: #fff;
+  background-color: var(--c-secondary01);
   border-radius: 8px;
   transition: box-shadow 0.3s;
 
@@ -93,7 +93,7 @@
 
   &:hover {
     .p-home-works__thumbnail::before {
-      opacity: 0.15;
+      opacity: 0.2;
     }
 
     .p-home-works__arrow {
@@ -101,7 +101,7 @@
     }
 
     .p-home-works__content {
-      border-color: #efefef;
+      border-color: var(--c-secondary04);
     }
   }
 }
@@ -146,7 +146,7 @@
   height: 50px;
   border-radius: 50%;
   border: 1px solid #fff;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   opacity: 0;
   transition: opacity 0.3s;
 
@@ -168,10 +168,10 @@
 
 .p-home-works__content {
   padding: 20px 22px;
-  border: 1px solid #dddddd;
+  border: 1px solid var(--c-secondary06);
   border-top: none;
   border-radius: 0 0 8px 8px;
-  background-color: #fff;
+  background-color: var(--c-secondary01);
   transition: border-color 0.3s;
 }
 
@@ -209,9 +209,9 @@
   padding: 5px 14px 3px;
   font-size: 12px;
   font-weight: 500;
-  font-family: global.$font-en;
-  color: #fff;
-  background: linear-gradient(150deg, #333, #777);
+  font-family: var(--font-en);
+  color: var(--c-secondary01);
+  background: linear-gradient(150deg, var(--c-primary04), var(--c-primary09));
   border-radius: 100px;
 }
 

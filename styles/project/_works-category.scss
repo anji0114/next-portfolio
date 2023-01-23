@@ -39,7 +39,7 @@
   letter-spacing: 0.025em;
   padding: 14px 11px 14px 5px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--c-secondary08);
 
   &::before {
     content: "";
@@ -73,12 +73,18 @@
   }
 }
 
+[data-theme="dark"] .p-works-category__item a {
+  &::before {
+    filter: brightness(0) invert(1);
+  }
+}
+
 .p-works-category__item {
   &:not(:nth-of-type(n + 3)) a {
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid var(--c-secondary08);
   }
   &:nth-of-type(2n) {
-    border-left: 1px solid #eaeaea;
+    border-left: 1px solid var(--c-secondary08);
   }
 
   @include global.mq("md") {
@@ -88,11 +94,11 @@
 
     &:nth-of-type(3n + 2) a,
     &:nth-of-type(3n + 3) a {
-      border-left: 1px solid #eaeaea;
+      border-left: 1px solid var(--c-secondary08);
     }
 
     &:not(:nth-of-type(n + 4)) a {
-      border-top: 1px solid #eaeaea;
+      border-top: 1px solid var(--c-secondary08);
     }
   }
 
@@ -102,7 +108,7 @@
     }
 
     &:first-of-type a {
-      border-top: 1px solid #eaeaea;
+      border-top: 1px solid var(--c-secondary08);
     }
 
     &:nth-of-type(3n + 2) a,
@@ -113,9 +119,9 @@
 }
 
 .p-works-category__item a:hover {
-  color: global.$c-black-darkest;
-  background-color: #fff;
-  box-shadow: inset 5px 5px 10px #f0f0f0, inset -5px -5px 10px #ffffff;
+  color: var(--c-primary01);
+  background-color: var(--c-secondary01);
+  box-shadow: inset 5px 5px 10px var(--c-secondary07), inset -5px -5px 10px var(--c-secondary01);
 
   &::before {
     transform: translate(3px, calc(-50% + 1px));

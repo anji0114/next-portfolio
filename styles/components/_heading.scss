@@ -3,7 +3,7 @@
 .c-heading01 {
   font-size: 40px;
   font-weight: 700;
-  font-family: global.$font-en;
+  font-family: var(--font-en);
 
   span {
     display: inline-block;
@@ -24,7 +24,7 @@
 .c-heading02 {
   font-size: 40px;
   font-weight: 500;
-  font-family: global.$font-en;
+  font-family: var(--font-en);
 
   @include global.mq("md") {
     font-size: 42px;

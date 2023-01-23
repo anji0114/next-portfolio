@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoBlack from "images/icons/logo-black.svg";
+import logoDark from "images/icons/logo-dark.svg";
+import logoLight from "images/icons/logo-light.svg";
 
 export const Logo = () => {
   return (
     <Link href={"/"} className="c-logo">
-      <Image alt="" src={logoBlack} />
+      <div className="c-logo__image-wrap">
+        <Image alt="" src={logoDark} className="c-logo__image is--dark" />
+        <Image alt="" src={logoLight} className="c-logo__image is--light" />
+      </div>
       <p className="c-logo__text">ANJI TANAKA</p>
     </Link>
   );

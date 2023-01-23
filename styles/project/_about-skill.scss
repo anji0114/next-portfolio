@@ -20,15 +20,33 @@
 }
 
 .p-about-skill__bg01 {
-  background: linear-gradient(-30deg, #cb5f5f 0%, #edcb6d 15%, #fafafa 30%, #fafafa 100%);
+  background: linear-gradient(
+    -30deg,
+    #cb5f5f 0%,
+    #edcb6d 15%,
+    var(--c-secondary02) 30%,
+    var(--c-secondary02) 100%
+  );
 }
 
 .p-about-skill__bg02 {
-  background: linear-gradient(-30deg, #6d9aed 0%, #5fbfcb 15%, #fafafa 30%, #fafafa 100%);
+  background: linear-gradient(
+    -30deg,
+    #6d9aed 0%,
+    #5fbfcb 15%,
+    var(--c-secondary02) 30%,
+    var(--c-secondary02) 100%
+  );
 }
 
 .p-about-skill__bg03 {
-  background: linear-gradient(-30deg, #62009f 0%, #e06d6d 15%, #fafafa 30%, #fafafa 100%);
+  background: linear-gradient(
+    -30deg,
+    #62009f 0%,
+    #e06d6d 15%,
+    var(--c-secondary02) 30%,
+    var(--c-secondary02) 100%
+  );
 }
 
 .p-about-skill__wrap {
@@ -47,7 +65,7 @@
 .p-about-skill__prerequisite-title {
   position: relative;
   font-weight: 500;
-  color: #777777;
+  color: var(--c-primary09);
   width: fit-content;
   cursor: pointer;
 
@@ -60,7 +78,7 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    border: 1px solid #555555;
+    border: 1px solid var(--c-primary07);
   }
 
   span {
@@ -77,7 +95,7 @@
       transform: translateY(calc(-50% + 1px));
       width: 5px;
       height: 1px;
-      background-color: #555555;
+      background-color: var(--c-primary07);
     }
 
     &::after {
@@ -106,7 +124,7 @@
 
 .p-about-skill__prerequisite-list {
   padding-bottom: 15px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid var(--c-secondary05);
 
   &:not(:first-of-type) {
     margin-top: 15px;
@@ -186,8 +204,8 @@
   overflow: hidden;
   padding: 15.5px 20px 15px 30px;
   border-radius: 100px;
-  border: 1px solid #ededef;
-  background-color: #fff;
+  border: 1px solid var(--c-secondary04);
+  background-color: var(--c-secondary01);
 
   @include global.mq("md") {
     padding: 15.5px 20px 15px 40px;
@@ -204,8 +222,12 @@
   top: 0;
   left: 0;
   height: 100%;
-  background: linear-gradient(90deg, #fff, #eee);
+  background: linear-gradient(90deg, var(--c-secondary01), var(--c-secondary05));
   mix-blend-mode: difference;
+}
+
+[data-theme="dark"] .p-about-skill__item-bg {
+  background: linear-gradient(90deg, #fff, #eeeeee);
 }
 
 .p-about-skill__item-name {
@@ -230,7 +252,7 @@
   display: inline-block;
   margin-left: 15px;
   font-size: 16px;
-  font-family: global.$font-en;
+  font-family: var(--font-en);
   letter-spacing: 0.02em;
 
   @include global.mq("md") {
@@ -242,7 +264,7 @@
 .p-about-skill__item-rate {
   padding-top: 5px;
   font-size: 14px;
-  font-family: global.$font-en;
+  font-family: var(--font-en);
 
   @include global.mq("md") {
     font-size: 18px;
@@ -257,7 +279,7 @@
   letter-spacing: 0.02em;
 
   a {
-    font-family: global.$font-en;
+    font-family: var(--font-en);
   }
 
   a:hover {

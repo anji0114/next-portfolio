@@ -28,9 +28,9 @@
 .l-footer__privacy {
   margin-top: 20px;
   text-align: center;
-  color: #444;
+  color: --c-primary06;
   font-size: 14px;
-  font-family: global.$font-en;
+  font-family: var(--font-en);
 
   @include global.mq("md") {
     margin-top: 10px;

@@ -18,14 +18,17 @@
   --c-secondary05: #eeeeee;
   --c-secondary06: #ddd;
   --c-secondary07: #f0f0f0;
+  --c-secondary08: #eaeaea;
 
   // shadow
   --c-shadow01: rgba(11, 11, 11, 0.05);
   --c-shadow02: rgba(0, 0, 0, 0.1);
+  --c-shadow03: rgba(0, 0, 0, 0.075);
+  --c-shadow04: rgba(0, 0, 0, 0.3);
 
-  // parts
-  --c-header-button: #fff;
-  --c-header-button-shadow: #f0f0f0;
+  // font
+  --font-ja: "Noto Sans JP", sans-serif;
+  --font-en: "Roboto", sans-serif;
 }
 
 :root[data-theme="dark"] {
@@ -40,25 +43,24 @@
   --c-primary09: #888888;
 
   // secondary
-  --c-secondary01: #000;
-  --c-secondary02: #050505;
-  --c-secondary03: #030303;
-  --c-secondary04: #101010;
-  --c-secondary05: #111111;
+  --c-secondary01: #020202;
+  --c-secondary02: #060606;
+  --c-secondary03: #191919;
+  --c-secondary04: #1f1f1f;
+  --c-secondary05: #1a1a1a;
   --c-secondary06: #222222;
   --c-secondary07: #0f0f0f;
+  --c-secondary08: #151515;
 
   // shadow
-  --c-shadow01: rgba(0, 0, 0, 0.3);
-  --c-shadow02: rgba(0, 0, 0, 0.5);
-
-  // parts
-  --c-header-button: #111;
-  --c-header-button-shadow: #1a1a1a;
+  --c-shadow01: rgba(239, 239, 239, 0.3);
+  --c-shadow02: rgba(255, 255, 255, 0.5);
+  --c-shadow03: rgba(255, 255, 255, 0.125);
+  --c-shadow04: rgba(255, 255, 255, 0.3);
 }
 
 body {
   background-color: var(--c-secondary02);
   color: var(--c-primary02);
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: var(--font-ja);
 }

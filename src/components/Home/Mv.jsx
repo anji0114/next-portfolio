@@ -1,9 +1,9 @@
 import { useDarkMode } from "src/hooks/useDarkMode";
 
 import Image from "next/image";
-import whiteLogo from "images/icons/logo_mv-white.svg";
-import blackLogo from "images/icons/logo_mv-black.svg";
-import { useEffect, useState } from "react";
+import lightLogo from "images/icons/logo_mv-light.svg";
+import darkLogo from "images/icons/logo_mv-dark.svg";
+import { useEffect } from "react";
 
 export const HomeMv = () => {
   const [colorTheme, setColorTheme] = useDarkMode();
@@ -48,19 +48,21 @@ export const HomeMv = () => {
         {/* image */}
         <div className="p-home-mv__image-wrap">
           <Image
-            src={blackLogo}
+            src={darkLogo}
             alt="site logo"
-            width={blackLogo.width}
-            height={blackLogo.height}
+            width={darkLogo.width}
+            height={darkLogo.height}
             priority
+            unoptimized
             className="p-home-mv__image is--dark"
           />
           <Image
-            src={whiteLogo}
+            src={lightLogo}
             alt="site logo"
-            width={whiteLogo.width}
-            height={whiteLogo.height}
+            width={lightLogo.width}
+            height={lightLogo.height}
             priority
+            unoptimized
             className="p-home-mv__image is--light"
           />
         </div>

@@ -21,7 +21,7 @@
   transform: translateY(calc(-50% - 5px));
   font-size: 53px;
   font-weight: 700;
-  font-family: global.$font-en;
+  font-family: var(--font-en);
   letter-spacing: 0.02em;
 
   @include global.mq("md") {
@@ -44,9 +44,9 @@
   margin-left: auto;
   margin-right: calc(50% - 50vw);
   padding: 10px 0 10px 10px;
-  border: 1px solid #eeeeee;
+  border: 1px solid var(--c-secondary05);
   border-radius: 10px 0 0 10px;
-  background-color: #fff;
+  background-color: var(--c-secondary01);
 
   img {
     width: 100%;
@@ -80,8 +80,8 @@
   width: 5px;
   height: 40px;
   border-radius: 5px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  box-shadow: 1px 1px 2px var(--c-shadow02);
+  background-color: var(--c-secondary01);
   overflow: hidden;
   transform: translateX(-50%);
 
@@ -93,7 +93,7 @@
     width: 3px;
     height: 10px;
     border-radius: 3px;
-    background-color: global.$c-black-dark;
+    background-color: var(--c-primary03);
     animation: animation-scroll-down 2s infinite ease;
   }
 
@@ -121,7 +121,7 @@
 .p-about-mv__scroll-text {
   display: inline-block;
   font-size: 14px;
-  font-family: global.$font-en;
+  font-family: var(--font-en);
 
   @include global.mq("md") {
     font-size: 16px;

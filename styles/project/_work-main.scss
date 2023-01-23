@@ -83,7 +83,7 @@
       width: 3px;
       height: 3px;
       border-radius: 50%;
-      background-color: global.$c-black;
+      background-color: var(--c-primary04);
     }
 
     @include global.mq("md") {

@@ -26,7 +26,7 @@
   padding-right: 50px;
   font-size: 50px;
   font-weight: 700;
-  font-family: global.$font-en;
+  font-family: var(--font-en);
   letter-spacing: 0.05em;
 
   @include global.mq("md") {
