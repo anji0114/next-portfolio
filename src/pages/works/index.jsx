@@ -8,7 +8,7 @@ const Works = (props) => {
   return (
     <>
       <Meta pageTitle="Works" noindex={true} />
-      <WorksArchive works={works} categories={categories} />;
+      <WorksArchive works={works} categories={categories} />
     </>
   );
 };

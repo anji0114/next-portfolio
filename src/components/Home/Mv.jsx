@@ -1,7 +1,17 @@
+import { useDarkMode } from "src/hooks/useDarkMode";
+
 import Image from "next/image";
-import logo from "images/icons/logo_mv.svg";
+import whiteLogo from "images/icons/logo_mv-white.svg";
+import blackLogo from "images/icons/logo_mv-black.svg";
+import { useEffect, useState } from "react";
 
 export const HomeMv = () => {
+  const [colorTheme, setColorTheme] = useDarkMode();
+
+  useEffect(() => {
+    setColorTheme(colorTheme);
+  }, [colorTheme]);
+
   return (
     <div className="p-home-mv">
       <div className="p-home-mv__wrap">
@@ -36,8 +46,23 @@ export const HomeMv = () => {
           </div>
         </div>
         {/* image */}
-        <div className="p-home-mv__image">
-          <Image src={logo} alt="logo" width={logo.width} height={logo.height} priority />
+        <div className="p-home-mv__image-wrap">
+          <Image
+            src={blackLogo}
+            alt="site logo"
+            width={blackLogo.width}
+            height={blackLogo.height}
+            priority
+            className="p-home-mv__image is--dark"
+          />
+          <Image
+            src={whiteLogo}
+            alt="site logo"
+            width={whiteLogo.width}
+            height={whiteLogo.height}
+            priority
+            className="p-home-mv__image is--light"
+          />
         </div>
         <div className="p-home-mv__scroll">
           <span className="p-home-mv__scroll-bar"></span>

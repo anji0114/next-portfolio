@@ -42,17 +42,17 @@
   position: relative;
   padding: 30px 25px 20px;
   border-radius: 5px;
-  border: 1px solid #dddddd;
-  background-color: #fff;
-  transition: border 0.3s, box-shadow 0.3s, border 0.3s;
+  border: 1px solid var(--c-secondary06);
+  background-color: var(--c-secondary01);
+  transition: box-shadow 0.2s;
 
   &:not(:first-of-type) {
     margin-top: 10px;
   }
 
   &:hover {
-    border: 1px solid #efefef;
-    box-shadow: 0px 4px 8px rgba(11, 11, 11, 0.05);
+    border: 1px solid var(--c-secondary04);
+    box-shadow: 0px 4px 8px var(--c-shadow01);
   }
 
   @include global.mq("md") {
@@ -101,7 +101,7 @@
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: 0.025em;
-  color: #333;
+  color: var(--c-primary04);
 }
 
 .p-home-repository__info {
@@ -117,7 +117,7 @@
   font-size: 12px;
   letter-spacing: 0.025em;
   font-family: global.$font-en;
-  color: #777777;
+  color: var(--c-primary08);
 
   &::before {
     content: "";
@@ -128,7 +128,7 @@
     height: 10px;
     transform: translateY(calc(-50% - 1px));
     border-radius: 50%;
-    background: linear-gradient(-45deg, global.$c-black-darkest, global.$c-black-light);
+    background: linear-gradient(-45deg, var(--c-primary01), var(--c-primary08));
   }
 }
 

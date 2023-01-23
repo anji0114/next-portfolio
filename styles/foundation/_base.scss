@@ -1,6 +1,64 @@
+:root {
+  // 黒系
+  --c-primary01: #000;
+  --c-primary02: #1a1a1a;
+  --c-primary03: #222;
+  --c-primary04: #333;
+  --c-primary05: #383838;
+  --c-primary06: #444;
+  --c-primary07: #555555;
+  --c-primary08: #666;
+  --c-primary09: #777;
+
+  // 白系
+  --c-secondary01: #fff;
+  --c-secondary02: #fafafa;
+  --c-secondary03: #fcfcfc;
+  --c-secondary04: #efefef;
+  --c-secondary05: #eeeeee;
+  --c-secondary06: #ddd;
+  --c-secondary07: #f0f0f0;
+
+  // shadow
+  --c-shadow01: rgba(11, 11, 11, 0.05);
+  --c-shadow02: rgba(0, 0, 0, 0.1);
+
+  // parts
+  --c-header-button: #fff;
+  --c-header-button-shadow: #f0f0f0;
+}
+
+:root[data-theme="dark"] {
+  --c-primary01: #fff;
+  --c-primary02: #e5e5e5;
+  --c-primary03: #dddddd;
+  --c-primary04: #eee;
+  --c-primary05: #c7c7c7;
+  --c-primary06: #bbbbbb;
+  --c-primary07: #aaaaaa;
+  --c-primary08: #999999;
+  --c-primary09: #888888;
+
+  // secondary
+  --c-secondary01: #000;
+  --c-secondary02: #050505;
+  --c-secondary03: #030303;
+  --c-secondary04: #101010;
+  --c-secondary05: #111111;
+  --c-secondary06: #222222;
+  --c-secondary07: #0f0f0f;
+
+  // shadow
+  --c-shadow01: rgba(0, 0, 0, 0.3);
+  --c-shadow02: rgba(0, 0, 0, 0.5);
+
+  // parts
+  --c-header-button: #111;
+  --c-header-button-shadow: #1a1a1a;
+}
+
 body {
-  background-color: #fafafa;
-  color: #1a1a1a;
+  background-color: var(--c-secondary02);
+  color: var(--c-primary02);
   font-family: "Noto Sans JP", sans-serif;
-  // font-family: "Roboto", sans-serif;
 }

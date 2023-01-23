@@ -64,7 +64,7 @@
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(#666, #1a1a1a);
+  background-image: linear-gradient(var(--c-primary08), var(--c-primary02));
 
   &::before {
     content: attr(data-text);
@@ -144,11 +144,12 @@
   }
 }
 
-.p-home-mv__image {
+.p-home-mv__image-wrap {
   position: absolute;
   top: calc(100% - 20px);
   right: -20px;
   width: 100vw;
+  padding-bottom: 81.5%;
   transform: translateY(-100%);
 
   img {
@@ -171,6 +172,27 @@
   @include global.mq("xl") {
     width: 900px;
   }
+}
+
+.p-home-mv__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-home-mv__image.is--dark {
+  opacity: 0;
+}
+
+[data-theme="dark"] .p-home-mv__image.is--dark {
+  opacity: 1;
+}
+
+[data-theme="dark"] .p-home-mv__image.is--light {
+  opacity: 0;
 }
 
 .p-home-mv__scroll {
@@ -197,8 +219,8 @@
   width: 5px;
   height: 75px;
   border-radius: 5px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  box-shadow: 1px 1px 2px var(--c-shadow02);
+  background-color: var(--c-secondary01);
   overflow: hidden;
 
   &::before {
@@ -209,7 +231,7 @@
     width: 3px;
     height: 10px;
     border-radius: 3px;
-    background-color: global.$c-black-dark;
+    background-color: var(--c-primary02);
 
     animation: animation-scroll-down 2s infinite ease;
   }

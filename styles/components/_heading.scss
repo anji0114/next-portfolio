@@ -18,7 +18,7 @@
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(global.$c-black-light, global.$c-base);
+  background-image: linear-gradient(var(--c-primary08), var(--c-primary02));
 }
 
 .c-heading02 {
@@ -36,5 +36,5 @@
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(global.$c-black-light, global.$c-base);
+  background-image: linear-gradient(var(--c-primary08), var(--c-primary02));
 }
