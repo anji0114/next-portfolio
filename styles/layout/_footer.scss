@@ -39,16 +39,3 @@
     text-align: right;
   }
 }
-
-.l-footer__mail {
-  display: inline-block;
-  margin-left: 15px;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  @include global.mq("md") {
-    margin-left: 20px;
-  }
-}

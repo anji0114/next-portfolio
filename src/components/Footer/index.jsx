@@ -19,9 +19,6 @@ export const Footer = () => {
           </div>
           <p className="l-footer__bottom">
             <span className="l-footer__privacy">©︎2023 Anji Tanaka</span>
-            <Link href="mailto:tanaka.anji14@gmail.com" className="l-footer__mail">
-              Mail: tanaka.anji14@gmail.com
-            </Link>
           </p>
         </div>
       </div>
