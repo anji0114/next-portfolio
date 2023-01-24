@@ -24,15 +24,9 @@ export const HeaderThemeChange = () => {
         <Image src={iconLight} alt="" />
       </div>
       <div className="l-header__theme-change-wrap">
-        <label className="l-header__theme-change-switch">
-          <input
-            type="checkbox"
-            className="l-header__theme-change-check"
-            onChange={handleThemeChange}
-            checked={sliderChecked}
-          />
-          <span className="l-header__theme-change-slider"></span>
-        </label>
+        <div className="l-header__theme-change-switch">
+          <button className="l-header__theme-change-slider" onClick={handleThemeChange}></button>
+        </div>
       </div>
       <div className="l-header__theme-change-icon">
         <Image src={iconDark} alt="" />
