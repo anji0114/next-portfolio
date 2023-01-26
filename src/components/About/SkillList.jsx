@@ -15,12 +15,12 @@ const Skills = [
   {
     label: "React.js",
     icon: "devicon-react-plain",
-    rate: 50,
+    rate: 30,
   },
   {
     label: "Next.js",
     icon: "devicon-nextjs-plain",
-    rate: 50,
+    rate: 40,
   },
   {
     label: "Sass",
@@ -30,28 +30,28 @@ const Skills = [
   {
     label: "Webpack",
     icon: "devicon-webpack-plain",
-    rate: 40,
+    rate: 50,
     example: "https://github.com/anji0114/wp-theme",
   },
   {
     label: "php",
     icon: "devicon-php-plain",
-    rate: 40,
+    rate: 50,
   },
   {
     label: "WordPress",
     icon: "devicon-wordpress-plain",
-    rate: 50,
+    rate: 70,
   },
   {
     label: "firebase",
     icon: "devicon-firebase-plain",
-    rate: 50,
+    rate: 10,
   },
   {
     label: "git",
     icon: "devicon-git-plain",
-    rate: 70,
+    rate: 60,
     example: "https://github.com/anji0114",
   },
 ];

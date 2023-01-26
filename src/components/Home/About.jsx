@@ -16,10 +16,7 @@ export const HomeAbout = () => {
           {/* content */}
           <div className="p-home-about__contents">
             <p className="p-home-about__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit text text Consequuntur dolore
-              porro,
-              <br />
-              consectetur quidem dolores laborum inventore architecto repudiandae neque nisi
+              2002年、埼玉生まれ。高校を卒業後、電子部品メーカーに就職し、約１年半技能職として工場に勤めました。その期間、独学でプログラミングを学び、2021年11月よりWeb制作フリーランスとして活動しております。
             </p>
             <div className="p-home-about__button-wrap">
               <Button url={"/about"}>View About</Button>

@@ -2,17 +2,22 @@ const ProfileContents = [
   {
     title: "田中 杏直　ANJ TANAKA",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit dolorem blanditiis quidem ullam dolore rerum a. Quae enim, officia ullam, iste amet rem hic dicta molestias odio ex, provident ipsum!",
+      "2002年、埼玉生まれ。<br />高校を卒業後、電子部品メーカーに就職し、約１年半技能職として工場に勤めました。その期間、独学でプログラミングを学び、2021年11月よりWeb制作フリーランスとして活動しております。<br />現在アプリケーション開発に興味を持ち、フロントエンド周りを勉強中しています。",
   },
   {
-    title: "田中 杏直　ANJI ANAKA",
+    title: "「考える」ことが好きです",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit dolorem blanditiis quidem ullam dolore rerum a. Quae enim, officia ullam, iste amet rem hic dicta molestias odio ex, provident ipsum!",
+      "「こんなアプリがあればいいのに」などを考える・想像する、「もっとここを改善すれば上手く」など戦略・分析することが好きです。そんな自分の考えを実現したいという思いがきっかけで、エンジニアを目指しました。<br />その他に「脳科学」に興味があり、「脳科学」を活かしたアプリを開発したいと思っています。",
   },
   {
-    title: "田中 杏直　ANJI TANAKA",
+    title: "「一流ならどうするか」を意識しています",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit dolorem blanditiis quidem ullam dolore rerum a. Quae enim, officia ullam, iste amet rem hic dicta molestias odio ex, provident ipsum!",
+      "日々生活・仕事の中で「一流ならどうするか」を意識し行動ようと心がけています。「一流の人」になることができなくても、「一流」に近づこうとすることは私でもできると考えております。<br />スキルを高めるだけでなく、人間としての魅力も高めていきたいです。",
+  },
+  {
+    title: "バカでかいドアなんてものはない。小さなドアがいっぱいあるだけだ。",
+    description:
+      "私の好きな漫画「宇宙兄弟」に出てくる言葉で、私の好きな言葉です。<br />大きな目標を達成するには、日々小さな目標を達成していく。<br />そんな日々の積み重ねを大切にしていきたいです。",
   },
 ];
 
@@ -34,7 +39,11 @@ export const AboutProfile = () => {
             {ProfileContents.map(({ title, description }) => (
               <dl key={title} className="p-about-profile__content">
                 <dt className="p-about-profile__title">{title}</dt>
-                <dd className="p-about-profile__description">{description}</dd>
+                <dd
+                  className="p-about-profile__description"
+                  dangerouslySetInnerHTML={{ __html: description }}
+                />
+                {}
               </dl>
             ))}
           </div>

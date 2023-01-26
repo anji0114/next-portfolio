@@ -2,24 +2,28 @@ import { useEffect, useState } from "react";
 
 const Prerequisites = [
   {
+    rate: "はじめに",
+    description: "HTML・CSSは1~2年ほど使用経験がございます",
+  },
+  {
     rate: "~ 20%",
-    description: "勉強中",
+    description: "勉強中・成果物作成中のレベル",
   },
   {
     rate: "21% ~ 40%",
-    description: "成果物はあるが実務案件はない",
+    description: "成果物はあるが実務案件での使用経験はない",
   },
   {
     rate: "41% ~ 60%",
-    description: "実務使用経験あり",
+    description: "実務案件での使用経験あり",
   },
   {
     rate: "61% ~ 80%",
-    description: "一通りの基礎的な勉強が終了したレベル",
+    description: "実務使用経験があり、頻繁に使用している",
   },
   {
     rate: "81% ~ 100%",
-    description: "一通りの基礎的な勉強が終了したレベル",
+    description: "複雑な機能の実装・CMSのカスタマイズなど応用が利くレベル",
   },
 ];
 
