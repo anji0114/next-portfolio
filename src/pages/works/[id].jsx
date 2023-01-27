@@ -22,9 +22,9 @@ const WorksId = (props) => {
         <div className="p-work-top">
           <div className="p-work-top__heading">
             <div className="p-work-top__title">{title}</div>
-            <time className="p-work-top__date">
+            <p className="p-work-top__date">
               <ConvertDate time={publishDate} />
-            </time>
+            </p>
           </div>
           <WorkCategories categories={categories} />
           <p className="p-work-top__description">{description}</p>
