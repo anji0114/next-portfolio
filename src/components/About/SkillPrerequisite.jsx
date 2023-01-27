@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useRef } from "react";
 
 const Prerequisites = [
   {
@@ -35,22 +35,21 @@ export const SKillPrerequisite = () => {
     setListOpen(!listOpen);
   };
 
-  useEffect(() => {
-    const prerequisite = document.getElementById("skill-prerequisite");
-    setPrerequisiteHeight(prerequisite.clientHeight);
-  });
+  const refPrerequisite = useRef(null);
 
   return (
-    <div className="p-about-skill__prerequisite">
-      <p
-        className={`p-about-skill__prerequisite-title ${listOpen ? "is--open" : ""}`}
-        onClick={listToggle}
-      >
+    <div className={`p-about-skill__prerequisite ${listOpen ? "is--open" : "is--close"}`}>
+      <p className="p-about-skill__prerequisite-title" onClick={listToggle}>
         <span>スキルレベル前提条件</span>
       </p>
       <div
         className="p-about-skill__prerequisite-contents-wrap"
-        style={{ height: listOpen ? prerequisiteHeight : 0 }}
+        ref={refPrerequisite}
+        style={{
+          "--prerequisite-height": refPrerequisite.current
+            ? `${refPrerequisite.current.scrollHeight}px`
+            : "0px",
+        }}
       >
         <div className="p-about-skill__prerequisite-contents" id="skill-prerequisite">
           {Prerequisites.map(({ rate, description }) => (
