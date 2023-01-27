@@ -16,10 +16,10 @@ const NavItems = [
     text: "WORKS",
     url: "/works",
     drawers: [
-      {
-        text: " Web Application",
-        url: "/works/category/web_app",
-      },
+      // {
+      //   text: " Web Application",
+      //   url: "/works/category/web_app",
+      // },
       {
         text: " Web Site",
         url: "/works/category/web_site",
