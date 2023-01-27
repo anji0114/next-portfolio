@@ -19,7 +19,9 @@ export const WorksArticle = (props) => {
       </div>
       <div className="p-works-article__contents">
         <div className="p-works-article__content">
-          <p className="p-works-article__time">{/* <ConvertDate time={publishDate} /> */}</p>
+          <p className="p-works-article__time">
+            <ConvertDate time={publishDate} />
+          </p>
           <h3 className="p-works-article__title">{title}</h3>
           <p className="p-works-article__description">{description}</p>
         </div>

@@ -5,7 +5,11 @@ export const ConvertDate = (props) => {
   const { time } = props;
   return (
     <>
-      <time dateTime={time}>{format(parseISO(time), "yyyy/MM/dd", { locale: ja })}</time>
+      <time dateTime={time}>
+        <span suppressHydrationWarning={true}>
+          {format(parseISO(time), "yyyy/MM/dd", { locale: ja })}
+        </span>
+      </time>
     </>
   );
 };
