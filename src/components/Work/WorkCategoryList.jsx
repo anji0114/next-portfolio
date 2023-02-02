@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const WorkCategories = (props) => {
+export const WorkCategoryList = (props) => {
   const { categories } = props
   return (
     <ul className="p-work-top__categories">
