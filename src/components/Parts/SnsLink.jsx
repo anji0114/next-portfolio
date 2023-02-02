@@ -1,17 +1,17 @@
-import { SnsLink } from "@/components/SnsLinks/SnsLink";
+import Image from "next/image";
 import zennIcon from "images/icons/icon_zenn.svg";
 import githubIcon from "images/icons/icon_github.svg";
-import Image from "next/image";
+import Link from "next/link";
 
-export const SnsLinks = () => {
+export const SnsLink = () => {
   return (
     <div className="c-sns__links">
-      <SnsLink url="https://zenn.dev/anji_dev">
+      <Link className="c-sns__icon" href="https://zenn.dev/anji_dev" target="_blank">
         <Image src={zennIcon} alt="zenn" width={zennIcon.width} height={zennIcon.height} />
-      </SnsLink>
-      <SnsLink url="https://github.com/anji0114">
+      </Link>
+      <Link className="c-sns__icon" href="https://github.com/anji0114" target="_blank">
         <Image src={githubIcon} alt="github" width={githubIcon.width} height={githubIcon.height} />
-      </SnsLink>
+      </Link>
     </div>
   );
 };

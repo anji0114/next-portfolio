@@ -1,4 +1,4 @@
-import { ConvertDate } from "@/components/ConvertDate";
+import { ConvertDate } from "@/components/Parts/ConvertDate";
 import Image from "next/image";
 import Link from "next/link";
 

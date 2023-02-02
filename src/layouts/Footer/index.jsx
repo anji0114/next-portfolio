@@ -1,7 +1,6 @@
-import { FooterContact } from "@/components/Footer/Contact";
-import { Logo } from "@/components/Logo";
-import { SnsLinks } from "@/components/SnsLinks";
-import Link from "next/link";
+import { FooterContact } from "src/layouts/Footer/FooterContact";
+import { Logo } from "@/components/Parts/Logo";
+import { SnsLink } from "@/components/Parts/SnsLink";
 
 export const Footer = () => {
   return (
@@ -14,7 +13,7 @@ export const Footer = () => {
               <Logo />
             </div>
             <div className="l-footer__links">
-              <SnsLinks />
+              <SnsLink />
             </div>
           </div>
           <p className="l-footer__bottom">

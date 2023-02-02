@@ -1,5 +1,5 @@
-import { SkillList } from "@/components/About/SkillList";
-import { SKillPrerequisite } from "@/components/About/SkillPrerequisite";
+import { AboutSkillList } from "@/components/About/AboutSkillList";
+import { AboutSKillPrerequisite } from "@/components/About/AboutSkillPrerequisite";
 
 export const AboutSkill = () => {
   return (
@@ -14,10 +14,10 @@ export const AboutSkill = () => {
               &nbsp;
               <span className="c-heading02__text">Set</span>
             </h2>
-            <SKillPrerequisite />
+            <AboutSKillPrerequisite />
           </div>
           <div className="p-about-skill__contents">
-            <SkillList />
+            <AboutSkillList />
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import { Button } from "@/components/Button";
-import { HomeWorksArticle } from "@/components/Home/WorksArticle";
+import { Button } from "@/components/Parts/Button";
+import { HomeWorksArticle } from "@/components/Home/HomeWorksArticle";
 
 export const HomeWorks = (props) => {
   const { works } = props;

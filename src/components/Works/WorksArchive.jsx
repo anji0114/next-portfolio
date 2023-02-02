@@ -1,5 +1,5 @@
-import { WorksArticle } from "@/components/Works/Article";
-import { Categories } from "@/components/Works/Categories";
+import { WorksArticle } from "@/components/Works/WorksArticle";
+import { WorksCategoryList } from "@/components/Works/WorksCategoryList";
 
 export const WorksArchive = (props) => {
   const { works, categories } = props;
@@ -17,7 +17,7 @@ export const WorksArchive = (props) => {
           </h2>
           <div className="p-works__contents">
             <aside className="p-works__aside">
-              <Categories categories={categories} />
+              <WorksCategoryList categories={categories} />
             </aside>
             <main className="p-works__main">
               <div className="p-works-articles">

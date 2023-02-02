@@ -1,5 +1,5 @@
-import { RepositoryList } from "@/components/Home/RepositoryList";
-import { Button } from "@/components/Button";
+import { RepositoryList } from "@/components/Home/HomeRepositoryList";
+import { Button } from "@/components/Parts/Button";
 
 export const HomeRepository = () => {
   return (

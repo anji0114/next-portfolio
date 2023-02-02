@@ -1,5 +1,5 @@
-import { Footer } from "@/components/Footer/index.jsx";
-import { Header } from "@/components/Header";
+import { Footer } from "src/layouts/Footer/index.jsx";
+import { Header } from "src/layouts/Header";
 
 export const Layout = (props) => {
   const { children } = props;

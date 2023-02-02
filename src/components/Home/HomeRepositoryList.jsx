@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { HomeRepositoryItem } from "@/components/Home/RepositoryItem";
+import { HomeRepositoryItem } from "@/components/Home/HomeRepositoryItem";
 
 export const RepositoryList = () => {
   const [repos, setRepos] = useState([]);

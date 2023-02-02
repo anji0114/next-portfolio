@@ -1,10 +1,10 @@
 import { getAllWorks } from "src/libs/client";
 
-import { HomeMv } from "@/components/Home/Mv";
-import { HomeAbout } from "@/components/Home/About";
-import { HomeWorks } from "@/components/Home/Works";
-import { HomeRepository } from "@/components/Home/Repository";
-import { Meta } from "@/components/Meta";
+import { HomeMv } from "@/components/Home/HomeMv";
+import { HomeAbout } from "@/components/Home/HomeAbout";
+import { HomeWorks } from "@/components/Home/HomeWorks";
+import { HomeRepository } from "@/components/Home/HomeRepository";
+import { Meta } from "@/components/Parts/Meta";
 
 const Home = (props) => {
   const { works } = props;

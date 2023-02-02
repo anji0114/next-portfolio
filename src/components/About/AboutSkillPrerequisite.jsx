@@ -27,15 +27,13 @@ const Prerequisites = [
   },
 ];
 
-export const SKillPrerequisite = () => {
+export const AboutSKillPrerequisite = () => {
   const [listOpen, setListOpen] = useState(false);
-  const [prerequisiteHeight, setPrerequisiteHeight] = useState(0);
+  const refPrerequisite = useRef(null);
 
   const listToggle = () => {
     setListOpen(!listOpen);
   };
-
-  const refPrerequisite = useRef(null);
 
   return (
     <div className={`p-about-skill__prerequisite ${listOpen ? "is--open" : "is--close"}`}>

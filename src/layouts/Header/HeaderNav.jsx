@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-
-import { SnsLinks } from "@/components/SnsLinks";
+import { SnsLink } from "@/components/Parts/SnsLink";
 
 const NavItems = [
   {
@@ -16,10 +15,10 @@ const NavItems = [
     text: "WORKS",
     url: "/works",
     drawers: [
-      // {
-      //   text: " Web Application",
-      //   url: "/works/category/web_app",
-      // },
+      {
+        text: " Web Application",
+        url: "/works/category/web_app",
+      },
       {
         text: " Web Site",
         url: "/works/category/web_site",
@@ -82,7 +81,7 @@ export const HeaderNav = () => {
           </ul>
           <div className="l-header__nav-bottom">
             <div className="l-header__sns">
-              <SnsLinks />
+              <SnsLink />
             </div>
             <p className="l-header__privacy">©︎2022 Anji Tanaka</p>
           </div>

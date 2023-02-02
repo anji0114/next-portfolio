@@ -56,7 +56,7 @@ const Skills = [
   },
 ];
 
-export const SkillList = () => {
+export const AboutSkillList = () => {
   return (
     <ul className="p-about-skill__list">
       {Skills.map(({ label, icon, rate, example }) => (
