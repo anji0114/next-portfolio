@@ -1,35 +1,25 @@
-import { useCallback, useEffect, useState } from "react";
 import { HomeRepositoryItem } from "@/components/Home/HomeRepositoryItem";
+import useSWRImmutable from "swr/immutable";
 
 export const RepositoryList = () => {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  const getRepos = useCallback(async () => {
-    try {
-      const response = await fetch(
-        `https://api.github.com/users/anji0114/repos?&client_id="${process.env.GITHUB_CLIENT_ID}"&client_secret="${process.env.GITHUB_CLIENT_SECRETS}"`
-      );
-
-      if (!response.ok) {
-        throw new Error("エラーが発生しました");
-      }
-      const json = await response.json();
-      const dateRepos = await json.sort((a, b) => -(new Date(a.pushed_at) - new Date(b.pushed_at)));
-      const sliceRepos = await dateRepos.slice(0, 6);
-      setRepos(sliceRepos);
-    } catch (err) {
-      setError(err);
+  const fetcher = async (url) => {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("エラーが発生したため、データ取得失敗");
     }
-    setLoading(false);
-  }, []);
 
-  useEffect(() => {
-    getRepos();
-  }, []);
+    const json = await response.json();
+    const dateRepos = await json.sort((a, b) => -(new Date(a.pushed_at) - new Date(b.pushed_at)));
+    const sliceRepos = await dateRepos.slice(0, 6);
+    return sliceRepos;
+  };
 
-  if (loading) {
+  const { data, error } = useSWRImmutable(
+    `https://api.github.com/users/anji0114/repos?&client_id="${process.env.GITHUB_CLIENT_ID}"&client_secret="${process.env.GITHUB_CLIENT_SECRETS}"`,
+    fetcher
+  );
+
+  if (!data && !error) {
     return <p className="p-home-repository__text">ローディング中</p>;
   }
 
@@ -43,13 +33,13 @@ export const RepositoryList = () => {
     );
   }
 
-  if (repos.length === 0) {
+  if (data.length === 0) {
     return <p className="p-home-repository__text">リポジトリは0件です</p>;
   }
 
   return (
     <ul className="p-home-repository__list">
-      {repos.map((repo) => (
+      {data.map((repo) => (
         <HomeRepositoryItem repo={repo} key={repo.id} />
       ))}
     </ul>
