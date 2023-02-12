@@ -17,14 +17,9 @@
 
 // project
 @use "./project/page-404";
-@use "./project/about-mv";
-@use "./project/about-profile";
-@use "./project/about-skill";
+@use "./project/about";
 @use "./project/contact";
-@use "./project/home-mv";
-@use "./project/home-about";
-@use "./project/home-works";
-@use "./project/home-repository";
+@use "./project/home";
 @use "./project/work-info";
 @use "./project/work-main";
 @use "./project/work-top";

@@ -1,5 +1,223 @@
 @use "../global" as global;
 
+/* ============================
+p-about-mv
+ ============================ */
+.p-about-mv {
+  position: relative;
+  overflow: hidden;
+  padding: 130px 0 100px;
+
+  @include global.mq("md") {
+    padding: 160px 0;
+  }
+}
+
+.p-about-mv__inner {
+  position: relative;
+}
+
+.p-about-mv__heading {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  transform: translateY(calc(-50% - 5px));
+  font-size: 53px;
+  font-weight: 700;
+  font-family: var(--font-en);
+  letter-spacing: 0.02em;
+
+  @include global.mq("md") {
+    font-size: 95px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include global.mq("lg") {
+    font-size: 120px;
+  }
+
+  @include global.mq("xl") {
+    font-size: 130px;
+  }
+}
+
+.p-about-mv__image {
+  margin-left: auto;
+  margin-right: calc(50% - 50vw);
+  padding: 10px 0 10px 10px;
+  border: 1px solid var(--c-secondary05);
+  border-radius: 10px 0 0 10px;
+  background-color: var(--c-secondary01);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @include global.mq("md") {
+    width: 630px;
+    max-width: 80%;
+    padding: 20px 0 20px 20px;
+  }
+}
+
+.p-about-mv__scroll {
+  position: absolute;
+  padding-bottom: 50px;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  @include global.mq("md") {
+    padding-bottom: 70px;
+  }
+}
+
+.p-about-mv__scroll-bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: inline-block;
+  width: 5px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px var(--c-shadow02);
+  background-color: var(--c-secondary01);
+  overflow: hidden;
+  transform: translateX(-50%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: var(--c-primary03);
+    animation: animation-scroll-down 2s infinite ease;
+  }
+
+  @include global.mq("md") {
+    height: 60px;
+  }
+}
+
+@keyframes animation-scroll-down {
+  0% {
+    top: -12px;
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.p-about-mv__scroll-text {
+  display: inline-block;
+  font-size: 14px;
+  font-family: var(--font-en);
+
+  @include global.mq("md") {
+    font-size: 16px;
+  }
+}
+
+/* ============================
+p-about-profile
+ ============================ */
+.p-about-profile {
+  margin-top: 60px;
+
+  @include global.mq("md") {
+    margin-top: 90px;
+  }
+}
+
+.p-about-profile__grid {
+  @include global.mq("md") {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-about-profile__heading {
+  @include global.mq("md") {
+    width: 280px;
+  }
+
+  @include global.mq("lg") {
+    width: 300px;
+  }
+}
+
+.p-about-profile__contents {
+  margin-top: 40px;
+  @include global.mq("md") {
+    margin-top: 0;
+    width: calc(100% - 280px);
+  }
+
+  @include global.mq("lg") {
+    width: calc(100% - 300px);
+  }
+}
+
+.p-about-profile__content {
+  &:not(:last-of-type) {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+  }
+
+  &:not(:first-of-type) {
+    margin-top: 40px;
+  }
+
+  @include global.mq("md") {
+    &:not(:last-of-type) {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 60px;
+    }
+  }
+}
+
+.p-about-profile__title {
+  font-size: 18px;
+  font-weight: 500;
+
+  @include global.mq("md") {
+    font-size: 20px;
+  }
+}
+
+.p-about-profile__description {
+  margin-top: 15px;
+  line-height: 2;
+
+  @include global.mq("md") {
+    margin-top: 20px;
+  }
+
+  @include global.mq("lg") {
+    font-size: 18px;
+  }
+}
+
+/* ============================
+p-about-skill
+ ============================ */
 .p-about-skill {
   position: relative;
   margin-top: 90px;
