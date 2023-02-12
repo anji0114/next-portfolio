@@ -1,4 +1,4 @@
-import { HomeRepositoryItem } from "@/components/Home/HomeRepositoryItem";
+import { HomeRepositoryItem } from "src/components/Home/HomeRepositoryItem";
 import useSWRImmutable from "swr/immutable";
 
 export const RepositoryList = () => {

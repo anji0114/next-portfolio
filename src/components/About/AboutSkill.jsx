@@ -1,5 +1,5 @@
-import { AboutSkillList } from "@/components/About/AboutSkillList";
-import { AboutSKillPrerequisite } from "@/components/About/AboutSkillPrerequisite";
+import { AboutSkillList } from "src/components/About/AboutSkillList";
+import { AboutSKillPrerequisite } from "src/components/About/AboutSkillPrerequisite";
 
 export const AboutSkill = () => {
   return (

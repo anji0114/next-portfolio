@@ -1,7 +1,7 @@
-import { AboutMv } from "@/components/About/AboutMv";
-import { AboutSkill } from "@/components/About/AboutSkill";
-import { AboutProfile } from "@/components/About/AboutProfile";
-import { Meta } from "@/components/Parts/Meta";
+import { AboutMv } from "src/components/About/AboutMv";
+import { AboutSkill } from "src/components/About/AboutSkill";
+import { AboutProfile } from "src/components/About/AboutProfile";
+import { Meta } from "src/components/Parts/Meta";
 
 const About = () => {
   return (

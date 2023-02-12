@@ -1,4 +1,4 @@
-import { Logo } from "@/components/Parts/Logo";
+import { Logo } from "src/components/Parts/Logo";
 import { HeaderThemeChange } from "src/layouts/Header/HeaderThemeChange";
 import { HeaderNav } from "src/layouts/Header/HeaderNav";
 

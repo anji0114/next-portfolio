@@ -1,5 +1,5 @@
-import { WorksArticle } from "@/components/Works/WorksArticle";
-import { WorksCategoryList } from "@/components/Works/WorksCategoryList";
+import { WorksArticle } from "src/components/Works/WorksArticle";
+import { WorksCategoryList } from "src/components/Works/WorksCategoryList";
 
 export const WorksArchive = (props) => {
   const { works, categories } = props;

@@ -1,4 +1,4 @@
-import { Button } from "@/components/Parts/Button";
+import { Button } from "src/components/Parts/Button";
 
 const Custom404 = () => {
   return (

@@ -1,9 +1,9 @@
 import { client, getAllWorks } from "src/libs/client";
-import { Button } from "@/components/Parts/Button";
-import { ConvertDate } from "@/components/Parts/ConvertDate";
-import { WorkCategoryList } from "@/components/Work/WorkCategoryList";
-import { WorkInfo } from "@/components/Work/WorkInfo";
-import { Meta } from "@/components/Parts/Meta";
+import { Button } from "src/components/Parts/Button";
+import { ConvertDate } from "src/components/Parts/ConvertDate";
+import { WorkCategoryList } from "src/components/Work/WorkCategoryList";
+import { WorkInfo } from "src/components/Work/WorkInfo";
+import { Meta } from "src/components/Parts/Meta";
 
 const WorksId = (props) => {
   const { title, thumbnail, type, publishDate, description, details, content, categories } = props;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { SnsLink } from "@/components/Parts/SnsLink";
+import { SnsLink } from "src/components/Parts/SnsLink";
 
 const NavItems = [
   {

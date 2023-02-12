@@ -1,5 +1,5 @@
-import { Meta } from "@/components/Parts/Meta";
-import { WorksArchive } from "@/components/Works/WorksArchive";
+import { Meta } from "src/components/Parts/Meta";
+import { WorksArchive } from "src/components/Works/WorksArchive";
 import { getAllCategory, getAllWorks } from "src/libs/client";
 
 const Works = (props) => {

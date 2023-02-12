@@ -1,6 +1,6 @@
 import { FooterContact } from "src/layouts/Footer/FooterContact";
-import { Logo } from "@/components/Parts/Logo";
-import { SnsLink } from "@/components/Parts/SnsLink";
+import { Logo } from "src/components/Parts/Logo";
+import { SnsLink } from "src/components/Parts/SnsLink";
 
 export const Footer = () => {
   return (

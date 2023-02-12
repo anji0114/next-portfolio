@@ -1,4 +1,4 @@
-import { Button } from "@/components/Parts/Button";
+import { Button } from "src/components/Parts/Button";
 
 export const HomeAbout = () => {
   return (
