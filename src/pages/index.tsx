@@ -7,9 +7,23 @@ import { HomeWorks } from "src/components/Home/HomeWorks";
 import { HomeRepository } from "src/components/Home/HomeRepository";
 import { Meta } from "src/components/Parts/Meta";
 
-const Home: NextPage = (props: any) => {
-  const { works } = props;
+export type Works = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+  title: string;
+  type: string[];
+  publishDate: string;
+  thumbnail: any;
+  description: string;
+  details?: any[];
+  content: string;
+  categories: any[];
+};
 
+const Home: NextPage<{ works: Works[] }> = ({ works }) => {
   return (
     <>
       <Meta />
