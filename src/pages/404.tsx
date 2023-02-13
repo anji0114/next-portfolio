@@ -1,6 +1,7 @@
+import { NextPage } from "next";
 import { Button } from "src/components/Parts/Button";
 
-const Custom404 = () => {
+const Custom404: NextPage = () => {
   return (
     <div className="p-404">
       <div className="p-404__wrap">

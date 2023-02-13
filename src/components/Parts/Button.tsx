@@ -1,8 +1,13 @@
 import Link from "next/link";
+import { ReactNode } from "react";
 
-export const Button = (props) => {
-  const { url, children, targetBool } = props;
+type Props = {
+  url: string;
+  children: ReactNode;
+  targetBool?: boolean;
+};
 
+export const Button = ({ url, children, targetBool }: Props): JSX.Element => {
   return (
     <Link href={url} className="c-button01" target={targetBool ? "_blank" : ""}>
       <span className="c-button01__wrap">

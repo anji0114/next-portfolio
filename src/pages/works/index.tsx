@@ -2,9 +2,12 @@ import { Meta } from "src/components/Parts/Meta";
 import { WorksArchive } from "src/components/Works/WorksArchive";
 import { getAllCategory, getAllWorks } from "src/libs/client";
 
-const Works = (props) => {
-  const { works, categories } = props;
+type Props = {
+  works: [];
+  categories: [];
+};
 
+const Works = ({ works, categories }: Props) => {
   return (
     <>
       <Meta pageTitle="Works" noindex={true} />

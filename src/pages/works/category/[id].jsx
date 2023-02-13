@@ -1,3 +1,4 @@
+import { GetStaticProps, NextPage } from "next";
 import { Meta } from "src/components/Parts/Meta";
 import { WorksArchive } from "src/components/Works/WorksArchive";
 import { client, getAllCategory } from "src/libs/client";

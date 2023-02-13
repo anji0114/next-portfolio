@@ -1,3 +1,4 @@
+import { GetStaticProps } from "next";
 import { client, getAllWorks } from "src/libs/client";
 import { Button } from "src/components/Parts/Button";
 import { ConvertDate } from "src/components/Parts/ConvertDate";
@@ -5,7 +6,7 @@ import { WorkCategoryList } from "src/components/Work/WorkCategoryList";
 import { WorkInfo } from "src/components/Work/WorkInfo";
 import { Meta } from "src/components/Parts/Meta";
 
-const WorksId = (props) => {
+const WorksId = (props: any) => {
   const { title, thumbnail, type, publishDate, description, details, content, categories } = props;
   return (
     <>
@@ -55,7 +56,7 @@ const WorksId = (props) => {
 
 export const getStaticPaths = async () => {
   const data = await getAllWorks();
-  const ids = data.map((content) => `/works/${content.id}`);
+  const ids = data.map((content: any) => `/works/${content.id}`);
 
   return {
     paths: ids,
@@ -63,7 +64,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps<{ data: any }> = async (context) => {
   if (!context.params) {
     return {
       notFound: true,

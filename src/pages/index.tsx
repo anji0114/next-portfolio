@@ -1,3 +1,4 @@
+import { GetStaticProps, NextPage } from "next";
 import { getAllWorks } from "src/libs/client";
 
 import { HomeMv } from "src/components/Home/HomeMv";
@@ -6,7 +7,7 @@ import { HomeWorks } from "src/components/Home/HomeWorks";
 import { HomeRepository } from "src/components/Home/HomeRepository";
 import { Meta } from "src/components/Parts/Meta";
 
-const Home = (props) => {
+const Home: NextPage = (props: any) => {
   const { works } = props;
 
   return (
@@ -24,7 +25,7 @@ const Home = (props) => {
 
 export default Home;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const works = await getAllWorks(6);
 
   return {
