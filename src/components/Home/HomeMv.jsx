@@ -19,29 +19,22 @@ export const HomeMv = () => {
         <div className="p-home-mv__inner">
           <div className="p-home-mv__content">
             <p className="p-home-mv__title">
-              <span
-                className="p-home-mv__title-text p-home-mv__title-text01"
-                data-text="Welcome to"
-              >
-                Welcome to
-              </span>
-              <br />
-              <span className="p-home-mv__title-text p-home-mv__title-text02" data-text="My">
-                My
+              <span className="p-home-mv__title-text p-home-mv__title-text01" data-text="Tanaka">
+                Tanaka
               </span>
               &nbsp;
+              <span className="p-home-mv__title-text p-home-mv__title-text02" data-text="Anji's">
+                Anji's
+              </span>
+              <br />
               <span className="p-home-mv__title-text p-home-mv__title-text03" data-text="PortFolio">
                 PortFolio
               </span>
             </p>
             <p className="p-home-mv__text">
-              <span className="c-gradient__text-wrap" data-text="TANAKA ANJI">
-                <span className="c-gradient__text">TANAKA ANJI</span>
-              </span>
+              Developed by
               <br />
-              <span className="c-gradient__text-wrap" data-text="Front-end Developer">
-                <span className="c-gradient__text">Front-end Developer</span>
-              </span>
+              <span>React.js / Next.js / Typescript / microCMS</span>
             </p>
           </div>
         </div>

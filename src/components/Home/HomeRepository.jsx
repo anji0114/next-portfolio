@@ -11,11 +11,12 @@ export const HomeRepository = () => {
             <span className="c-gradient__text">Repository</span>
           </span>
         </h2>
+        <p className="c-heading01__description">Githubリポジトリ</p>
         <div className="p-home-repository__contents">
           <RepositoryList />
           <div className="p-home-repository__button-wrap">
             <Button url={"https://github.com/anji0114?tab=repositories"} targetBool={true}>
-              View Repository
+              詳しく見る
             </Button>
           </div>
         </div>

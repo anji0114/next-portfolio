@@ -22,7 +22,6 @@ p-home-about
   text-align: center;
 
   @include global.mq("lg") {
-    padding-top: 5px;
     text-align: left;
   }
 }

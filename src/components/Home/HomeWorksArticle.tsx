@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FC } from "react";
+import { Work } from "src/types";
 
-export const HomeWorksArticle = (props) => {
-  const { thumbnail, title, description, type, id } = props.work;
+export const HomeWorksArticle: FC<{ work: Work }> = ({ work }) => {
+  const { thumbnail, title, description, type, id } = work;
 
   return (
     <article className="p-home-works__article">

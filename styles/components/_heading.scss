@@ -21,6 +21,19 @@
   background-image: linear-gradient(var(--c-primary08), var(--c-primary02));
 }
 
+.c-heading01__description {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  color: var(--c-primary03);
+
+  @include global.mq("md") {
+    font-size: 14px;
+  }
+}
+
 .c-heading02 {
   font-size: 40px;
   font-weight: 500;

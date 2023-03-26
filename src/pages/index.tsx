@@ -6,24 +6,9 @@ import { HomeAbout } from "src/components/Home/HomeAbout";
 import { HomeWorks } from "src/components/Home/HomeWorks";
 import { HomeRepository } from "src/components/Home/HomeRepository";
 import { Meta } from "src/components/Parts/Meta";
+import { Work } from "src/types";
 
-export type Works = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-  title: string;
-  type: string[];
-  publishDate: string;
-  thumbnail: any;
-  description: string;
-  details?: any[];
-  content: string;
-  categories: any[];
-};
-
-const Home: NextPage<{ works: Works[] }> = ({ works }) => {
+const Home: NextPage<{ works: Work[] }> = ({ works }) => {
   return (
     <>
       <Meta />
@@ -43,6 +28,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const works = await getAllWorks(6);
 
   return {
-    props: { works: works },
+    props: { works },
   };
 };
