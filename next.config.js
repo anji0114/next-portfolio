@@ -3,7 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
-    optimizeFonts: true,
     appDir: true,
   },
   // Imageでmicro cmsの画像を表示するための設定
