@@ -1,21 +1,13 @@
 import Image from "next/image";
-import { useState } from "react";
-import { useDarkMode } from "src/hooks/useDarkMode";
 import iconDark from "images/icons/icon_dark.svg";
 import iconLight from "images/icons/icon_light.svg";
+import { useTheme } from "next-themes";
 
-export const HeaderThemeChange = () => {
-  const [colorTheme, setColorTheme] = useDarkMode();
-  const [sliderChecked, setSliderChecked] = useState(colorTheme === "dark" ? true : false);
+export const HeaderThemeChange = (): JSX.Element => {
+  const { theme, setTheme } = useTheme();
 
-  const handleThemeChange = () => {
-    setSliderChecked(!sliderChecked);
-
-    if (colorTheme === "dark") {
-      setColorTheme("light");
-    } else {
-      setColorTheme("dark");
-    }
+  const handleChangeTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
@@ -25,7 +17,7 @@ export const HeaderThemeChange = () => {
       </div>
       <div className="l-header__theme-change-wrap">
         <div className="l-header__theme-change-switch">
-          <button className="l-header__theme-change-slider" onClick={handleThemeChange}></button>
+          <button className="l-header__theme-change-slider" onClick={handleChangeTheme}></button>
         </div>
       </div>
       <div className="l-header__theme-change-icon">

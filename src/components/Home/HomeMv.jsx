@@ -1,17 +1,9 @@
-import { useDarkMode } from "src/hooks/useDarkMode";
-
 import Image from "next/image";
 import lightLogo from "images/icons/logo_mv-light.svg";
 import darkLogo from "images/icons/logo_mv-dark.svg";
-import { useEffect } from "react";
+
 
 export const HomeMv = () => {
-  const [colorTheme, setColorTheme] = useDarkMode();
-
-  useEffect(() => {
-    setColorTheme(colorTheme);
-  }, [colorTheme]);
-
   return (
     <div className="p-home-mv">
       <div className="p-home-mv__wrap">
@@ -20,11 +12,10 @@ export const HomeMv = () => {
           <div className="p-home-mv__content">
             <p className="p-home-mv__title">
               <span className="p-home-mv__title-text p-home-mv__title-text01" data-text="Tanaka">
-                Tanaka
+                Tanaka&nbsp;
               </span>
-              &nbsp;
-              <span className="p-home-mv__title-text p-home-mv__title-text02" data-text="Anji's">
-                Anji's
+              <span className="p-home-mv__title-text p-home-mv__title-text02" data-text="Anji’s">
+                Anji’s
               </span>
               <br />
               <span className="p-home-mv__title-text p-home-mv__title-text03" data-text="PortFolio">
