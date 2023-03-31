@@ -1,9 +1,9 @@
-import { useState, useRef } from "react";
+import { useState, useRef, CSSProperties } from "react";
 
 const Prerequisites = [
   {
     rate: "はじめに",
-    description: "HTML・CSSは1~2年ほど使用経験がございます",
+    description: "HTML・CSSは2年ほど使用経験がございます",
   },
   {
     rate: "~ 20%",
@@ -27,8 +27,12 @@ const Prerequisites = [
   },
 ];
 
+type StyleProps = {
+  [key: string]: string | number;
+};
+
 export const AboutSKillPrerequisite = () => {
-  const [listOpen, setListOpen] = useState(false);
+  const [listOpen, setListOpen] = useState<boolean>(false);
   const refPrerequisite = useRef(null);
 
   const listToggle = () => {

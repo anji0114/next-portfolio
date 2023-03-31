@@ -1,17 +1,25 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import ogpImage from "images/ogp.png";
+import { FC } from "react";
 
-export const Meta = (props) => {
-  const {
-    pageTitle,
-    pageDescription,
-    pageImg,
-    pageImgWidth,
-    pageImgHeight,
-    noindex = false,
-  } = props;
+type Props = {
+  pageTitle: string;
+  pageDescription: string;
+  pageImg: string;
+  pageImgWidth: string;
+  pageImgHeight: string;
+  noindex: boolean;
+};
 
+export const Meta: FC<Props> = ({
+  pageTitle,
+  pageDescription,
+  pageImg,
+  pageImgWidth,
+  pageImgHeight,
+  noindex = false,
+}) => {
   const defaultTitle = "Portfolio site of Anji Tanaka";
   const defaultDescription =
     "田中 杏直のポートフォリオサイト。2002年生まれ・フロントエンドエンジニア。";

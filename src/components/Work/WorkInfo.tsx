@@ -1,7 +1,18 @@
 import Link from "next/link";
+import { FC } from "react";
 
-export const WorkInfo = (props) => {
-  const { type, details } = props;
+type Details = {
+  title: string;
+  text: string;
+  link: string | undefined;
+};
+
+type Props = {
+  type: string;
+  details: Details[];
+};
+
+export const WorkInfo: FC<Props> = ({ type, details }) => {
   return (
     <div className="p-work-info">
       <div className="p-work-info__content">

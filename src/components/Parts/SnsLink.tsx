@@ -3,7 +3,7 @@ import zennIcon from "images/icons/icon_zenn.svg";
 import githubIcon from "images/icons/icon_github.svg";
 import Link from "next/link";
 
-export const SnsLink = () => {
+export const SnsLink = (): JSX.Element => {
   return (
     <div className="c-sns__links">
       <Link className="c-sns__icon" href="https://zenn.dev/anji_dev" target="_blank">

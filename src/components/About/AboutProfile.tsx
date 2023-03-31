@@ -16,7 +16,7 @@ const ProfileContents = [
   },
 ];
 
-export const AboutProfile = () => {
+export const AboutProfile = (): JSX.Element => {
   return (
     <div className="p-about-profile">
       <div className="l-container">

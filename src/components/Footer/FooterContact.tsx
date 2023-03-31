@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const FooterContact = () => {
+export const FooterContact = (): JSX.Element => {
   return (
     <div className="p-contact">
       <Link href={"mailto:tanaka.anji14@gmail.com"} className="p-contact__link">

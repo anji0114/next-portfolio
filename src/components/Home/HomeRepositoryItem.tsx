@@ -1,9 +1,21 @@
 import GithubIcon from "images/icons/icon_github.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { FC } from "react";
 
-export const HomeRepositoryItem = (props) => {
-  const { name, html_url, language, description } = props.repo;
+type Repository = {
+  name: string;
+  html_url: string;
+  language: string;
+  description: string;
+};
+
+type Props = {
+  repo: Repository;
+};
+
+export const HomeRepositoryItem: FC<Props> = ({ repo }) => {
+  const { name, html_url, language, description } = repo;
   return (
     <li className="p-home-repository__item">
       <h3 className="p-home-repository__name">{name}</h3>

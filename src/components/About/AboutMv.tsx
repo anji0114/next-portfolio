@@ -1,7 +1,7 @@
 import Image from "next/image";
 import profileImage from "images/img_profile01.jpg";
 
-export const AboutMv = () => {
+export const AboutMv = (): JSX.Element => {
   return (
     <div className="p-about-mv">
       <div className="l-container">

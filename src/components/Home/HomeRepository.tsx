@@ -1,7 +1,7 @@
 import { RepositoryList } from "src/components/Home/HomeRepositoryList";
 import { Button } from "src/components/Parts/Button";
 
-export const HomeRepository = () => {
+export const HomeRepository = (): JSX.Element => {
   return (
     <section className="p-home-repository">
       <div className="l-container">

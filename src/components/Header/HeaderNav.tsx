@@ -32,8 +32,8 @@ const NavItems = [
   },
 ];
 
-export const HeaderNav = () => {
-  const [navOpen, setNavOpen] = useState(false);
+export const HeaderNav = (): JSX.Element => {
+  const [navOpen, setNavOpen] = useState<boolean>(false);
 
   const navToggle = () => {
     setNavOpen(!navOpen);

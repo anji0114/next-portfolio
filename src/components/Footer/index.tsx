@@ -1,8 +1,8 @@
-import { FooterContact } from "src/layouts/Footer/FooterContact";
+import { FooterContact } from "src/components/Footer/FooterContact";
 import { Logo } from "src/components/Parts/Logo";
 import { SnsLink } from "src/components/Parts/SnsLink";
 
-export const Footer = () => {
+export const Footer = (): JSX.Element => {
   return (
     <footer className="l-footer">
       <FooterContact />

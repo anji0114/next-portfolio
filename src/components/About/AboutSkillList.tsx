@@ -10,12 +10,12 @@ const Skills = [
   {
     label: "Typescript",
     icon: "devicon-typescript-plain",
-    rate: 10,
+    rate: 30,
   },
   {
     label: "React.js",
     icon: "devicon-react-plain",
-    rate: 30,
+    rate: 40,
   },
   {
     label: "Next.js",
@@ -56,7 +56,7 @@ const Skills = [
   },
 ];
 
-export const AboutSkillList = () => {
+export const AboutSkillList = (): JSX.Element => {
   return (
     <ul className="p-about-skill__list">
       {Skills.map(({ label, icon, rate, example }) => (

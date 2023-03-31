@@ -1,15 +1,19 @@
 import { HomeRepositoryItem } from "src/components/Home/HomeRepositoryItem";
 import useSWRImmutable from "swr/immutable";
 
-export const RepositoryList = () => {
-  const fetcher = async (url) => {
+export const RepositoryList = (): JSX.Element => {
+  const fetcher = async (url: string) => {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error("エラーが発生したため、データ取得失敗");
     }
 
     const json = await response.json();
-    const dateRepos = await json.sort((a, b) => -(new Date(a.pushed_at) - new Date(b.pushed_at)));
+    const dateRepos = await json.sort(
+      (a: { pushed_at: string }, b: { pushed_at: string }) =>
+        -(new Date(a.pushed_at).getTime() - new Date(b.pushed_at).getTime())
+    );
+
     const sliceRepos = await dateRepos.slice(0, 6);
     return sliceRepos;
   };
@@ -39,7 +43,7 @@ export const RepositoryList = () => {
 
   return (
     <ul className="p-home-repository__list">
-      {data.map((repo) => (
+      {data.map((repo: any) => (
         <HomeRepositoryItem repo={repo} key={repo.id} />
       ))}
     </ul>

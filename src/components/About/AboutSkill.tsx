@@ -1,7 +1,7 @@
 import { AboutSkillList } from "src/components/About/AboutSkillList";
 import { AboutSKillPrerequisite } from "src/components/About/AboutSkillPrerequisite";
 
-export const AboutSkill = () => {
+export const AboutSkill = (): JSX.Element => {
   return (
     <div className="p-about-skill">
       <div className="p-about-skill__wrap">

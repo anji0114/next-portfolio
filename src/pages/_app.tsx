@@ -1,5 +1,5 @@
 import { AppProps } from "next/app";
-import { Layout } from "src/layouts/Layout";
+import { Layout } from "src/components/Layout";
 import "styles/style.scss";
 import { ThemeProvider } from "next-themes";
 

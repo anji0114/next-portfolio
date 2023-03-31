@@ -3,7 +3,7 @@ import Link from "next/link";
 import logoDark from "images/icons/logo-dark.svg";
 import logoLight from "images/icons/logo-light.svg";
 
-export const Logo = () => {
+export const Logo = (): JSX.Element => {
   return (
     <Link href={"/"} className="c-logo">
       <div className="c-logo__image-wrap">
