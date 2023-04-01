@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import ogpImage from "images/ogp.png";
+import ogpImage from "src/images/ogp.png";
 import { FC } from "react";
 
 type Props = {

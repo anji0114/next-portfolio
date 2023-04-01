@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoDark from "images/icons/logo-dark.svg";
-import logoLight from "images/icons/logo-light.svg";
+import logoDark from "src/images/icons/logo-dark.svg";
+import logoLight from "src/images/icons/logo-light.svg";
 
 export const Logo = (): JSX.Element => {
   return (

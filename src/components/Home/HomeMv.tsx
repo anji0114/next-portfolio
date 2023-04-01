@@ -1,6 +1,6 @@
 import Image from "next/image";
-import lightLogo from "images/icons/logo_mv-light.svg";
-import darkLogo from "images/icons/logo_mv-dark.svg";
+import lightLogo from "src/images/icons/logo_mv-light.svg";
+import darkLogo from "src/images/icons/logo_mv-dark.svg";
 
 export const HomeMv = (): JSX.Element => {
   return (
@@ -24,7 +24,10 @@ export const HomeMv = (): JSX.Element => {
             <p className="p-home-mv__text">
               Developed by
               <br />
-              <span className="c-gradient__text-wrap" data-text="React.js / Next.js / Typescript / microCMS">
+              <span
+                className="c-gradient__text-wrap"
+                data-text="React.js / Next.js / Typescript / microCMS"
+              >
                 <span className="c-gradient__text">React.js / Next.js / Typescript / microCMS</span>
               </span>
             </p>

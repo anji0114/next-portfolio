@@ -1,6 +1,6 @@
 import Image from "next/image";
-import zennIcon from "images/icons/icon_zenn.svg";
-import githubIcon from "images/icons/icon_github.svg";
+import zennIcon from "src/images/icons/icon_zenn.svg";
+import githubIcon from "src/images/icons/icon_github.svg";
 import Link from "next/link";
 
 export const SnsLink = (): JSX.Element => {

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import iconDark from "images/icons/icon_dark.svg";
-import iconLight from "images/icons/icon_light.svg";
+import iconDark from "src/images/icons/icon_dark.svg";
+import iconLight from "src/images/icons/icon_light.svg";
 import { useTheme } from "next-themes";
 
 export const HeaderThemeChange = (): JSX.Element => {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profileImage from "images/img_profile01.jpg";
+import profileImage from "src/images/img_profile01.jpg";
 
 export const AboutMv = (): JSX.Element => {
   return (

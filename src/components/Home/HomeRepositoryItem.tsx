@@ -1,4 +1,4 @@
-import GithubIcon from "images/icons/icon_github.svg";
+import GithubIcon from "src/images/icons/icon_github.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
