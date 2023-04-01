@@ -3,7 +3,13 @@ import { Meta } from "src/components/Parts/Meta";
 import { WorksArchive } from "src/components/Works/WorksArchive";
 import { client, getAllCategory } from "src/libs/client";
 
-const WorksCategory = (props) => {
+
+type Props = {
+  works: []
+  categories: []
+}
+
+const WorksCategory: NextPage<Props> = (props) => {
   const { works, categories } = props;
 
   return (
@@ -19,7 +25,7 @@ export default WorksCategory;
 // paths
 export const getStaticPaths = async () => {
   const data = await getAllCategory();
-  const ids = data.map((content) => `/works/category/${content.id}`);
+  const ids: string[] = data.map((content: { id: string }) => `/works/category/${content.id}`);
 
   return {
     paths: ids,
@@ -28,7 +34,7 @@ export const getStaticPaths = async () => {
 };
 
 // works category 取得
-export const getStaticProps = async (contexts) => {
+export const getStaticProps = async (contexts: any) => {
   // categoryに紐ずくworks取得
   const id = contexts.params.id;
   const works = await client.get({

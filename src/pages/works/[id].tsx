@@ -4,8 +4,26 @@ import { ConvertDate } from "src/components/Parts/ConvertDate";
 import { WorkCategoryList } from "src/components/Work/WorkCategoryList";
 import { WorkInfo } from "src/components/Work/WorkInfo";
 import { Meta } from "src/components/Parts/Meta";
+import { NextPage } from "next";
 
-const WorksId = (props) => {
+type Thumbnail = {
+  url: string;
+  width: string;
+  height: string;
+};
+
+type Props = {
+  title: string;
+  thumbnail: Thumbnail;
+  type: string;
+  publishDate: string;
+  description: string;
+  details: [];
+  content: string;
+  categories: [];
+};
+
+const WorksId: NextPage<Props> = (props) => {
   const { title, thumbnail, type, publishDate, description, details, content, categories } = props;
   return (
     <>
@@ -55,7 +73,7 @@ const WorksId = (props) => {
 
 export const getStaticPaths = async () => {
   const data = await getAllWorks();
-  const ids = data.map((content) => `/works/${content.id}`);
+  const ids: string[] = data.map((content: { id: string }) => `/works/${content.id}`);
 
   return {
     paths: ids,
@@ -63,7 +81,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context: { params: any }) => {
   if (!context.params) {
     return {
       notFound: true,
