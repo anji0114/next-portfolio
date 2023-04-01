@@ -27,16 +27,18 @@ const Prerequisites = [
   },
 ];
 
-type StyleProps = {
-  [key: string]: string | number;
-};
-
 export const AboutSKillPrerequisite = () => {
   const [listOpen, setListOpen] = useState<boolean>(false);
-  const refPrerequisite = useRef(null);
+  const refPrerequisite = useRef<HTMLDivElement | null>(null);
 
   const listToggle = () => {
     setListOpen(!listOpen);
+  };
+
+  const styles: any = {
+    "--prerequisite-height": refPrerequisite.current
+      ? `${refPrerequisite.current?.scrollHeight}px`
+      : "0px",
   };
 
   return (
@@ -47,11 +49,7 @@ export const AboutSKillPrerequisite = () => {
       <div
         className="p-about-skill__prerequisite-contents-wrap"
         ref={refPrerequisite}
-        style={{
-          "--prerequisite-height": refPrerequisite.current
-            ? `${refPrerequisite.current.scrollHeight}px`
-            : "0px",
-        }}
+        style={styles}
       >
         <div className="p-about-skill__prerequisite-contents" id="skill-prerequisite">
           {Prerequisites.map(({ rate, description }) => (
