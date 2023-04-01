@@ -5,11 +5,11 @@ import { FC } from "react";
 
 type Props = {
   pageTitle: string;
-  pageDescription: string;
-  pageImg: string;
-  pageImgWidth: string;
-  pageImgHeight: string;
-  noindex: boolean;
+  pageDescription?: string;
+  pageImg?: string;
+  pageImgWidth?: string;
+  pageImgHeight?: string;
+  noindex?: boolean;
 };
 
 export const Meta: FC<Props> = ({
