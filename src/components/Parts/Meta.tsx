@@ -4,7 +4,7 @@ import ogpImage from "images/ogp.png";
 import { FC } from "react";
 
 type Props = {
-  pageTitle: string;
+  pageTitle?: string;
   pageDescription?: string;
   pageImg?: string;
   pageImgWidth?: string;
