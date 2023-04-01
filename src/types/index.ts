@@ -1,3 +1,8 @@
+export type Category = {
+  id: string;
+  name: string;
+};
+
 export type Work = {
   id: string;
   createdAt: string;
@@ -11,5 +16,5 @@ export type Work = {
   description: string;
   details?: any[];
   content: string;
-  categories: any[];
+  categories: Category[];
 };

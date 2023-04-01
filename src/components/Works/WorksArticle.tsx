@@ -1,9 +1,12 @@
 import { ConvertDate } from "src/components/Parts/ConvertDate";
 import Image from "next/image";
 import Link from "next/link";
+import { Work } from "src/types";
+import { FC } from "react";
 
-export const WorksArticle = (props) => {
-  const { thumbnail, publishDate, title, description, categories, id } = props.work;
+type Props = { work: Work };
+export const WorksArticle: FC<Props> = ({ work }) => {
+  const { thumbnail, publishDate, title, description, categories, id } = work;
 
   return (
     <article className="p-works-article">

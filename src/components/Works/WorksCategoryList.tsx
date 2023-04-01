@@ -1,7 +1,12 @@
 import Link from "next/link";
+import { FC } from "react";
+import { Category } from "src/types";
 
-export const WorksCategoryList = (props) => {
-  const { categories } = props;
+type Props = {
+  categories: Category[];
+};
+
+export const WorksCategoryList: FC<Props> = ({ categories }) => {
   return (
     <div className="p-works-category">
       <ul className="p-works-category__list">

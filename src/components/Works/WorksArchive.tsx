@@ -1,9 +1,14 @@
+import { FC } from "react";
 import { WorksArticle } from "src/components/Works/WorksArticle";
 import { WorksCategoryList } from "src/components/Works/WorksCategoryList";
+import { Category, Work } from "src/types";
 
-export const WorksArchive = (props) => {
-  const { works, categories } = props;
+type Props = {
+  works: Work[];
+  categories: Category[];
+};
 
+export const WorksArchive: FC<Props> = ({ works, categories }) => {
   return (
     <div className="p-works">
       <div className="p-works__wrap">

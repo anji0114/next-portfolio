@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { FC } from "react";
-
-type Category = {
-  id: string;
-  name: string;
-};
+import { Category } from "src/types";
 
 type Props = {
   categories: Category[];
