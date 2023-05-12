@@ -1,6 +1,8 @@
 import Image from "next/image";
 import lightLogo from "src/images/icons/logo_mv-light.svg";
 import darkLogo from "src/images/icons/logo_mv-dark.svg";
+import githubIcon from "src/images/icons/icon_github.svg";
+import Link from "next/link";
 
 export const HomeMv = (): JSX.Element => {
   return (
@@ -22,7 +24,14 @@ export const HomeMv = (): JSX.Element => {
               </span>
             </p>
             <p className="p-home-mv__text">
-              Developed by
+              <Link
+                href="https://github.com/anji0114/next-portfolio"
+                className="p-home-mv__text-link"
+                target="_blank"
+              >
+                <Image src={githubIcon} alt="" width={30} height={30} />
+                使用技術
+              </Link>
               <br />
               <span
                 className="c-gradient__text-wrap"
