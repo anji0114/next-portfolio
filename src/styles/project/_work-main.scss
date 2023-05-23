@@ -2,9 +2,15 @@
 
 .p-work-main {
   margin-top: 40px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--c-secondary05);
+  background-color: var(--c-secondary01);
 
   @include global.mq("md") {
     margin-top: 50px;
+    padding: 40px 35px;
+    border-radius: 20px;
   }
 }
 
@@ -27,12 +33,23 @@
 
   h2 {
     margin: 40px 0 20px;
+    padding-bottom: 15px;
     font-size: 22px;
     font-weight: 500;
+    border-bottom: 3px double var(--c-primary04);
 
     @include global.mq("md") {
       margin: 50px 0 25px;
       font-size: 26px;
+    }
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 20px;
+
+    @include global.mq("md") {
+      font-size: 22px;
     }
   }
 
@@ -101,10 +118,10 @@
   img {
     display: block;
     width: 100%;
-    margin: 40px 0;
+    margin: 20px 0 30px;
 
     @include global.mq("md") {
-      margin: 50px 0;
+      margin: 30px 0 40px;
     }
   }
 }
