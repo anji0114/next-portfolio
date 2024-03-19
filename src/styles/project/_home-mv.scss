@@ -2,60 +2,40 @@
 /* ============================
 p-home-mv
  ============================ */
-.p-home-mv__wrap {
-  position: relative;
-  overflow: hidden;
-  padding: 140px 0 260px;
-  max-width: 1400px;
-  margin: 0 auto;
-
-  @include global.mq("md") {
-    padding: 190px 0 120px;
-  }
-
-  @include global.mq("lg") {
-    padding: 220px 0 170px;
-  }
-
-  @include global.mq("xl") {
-    padding: 220px 0;
-  }
-}
 
 .p-home-mv__inner {
-  padding: 0 20px;
+  height: 100vh;
+  min-height: 400px;
   margin: 0 auto;
+  padding: 120px 20px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
 
   @include global.mq("md") {
-    padding: 0 30px;
     max-width: 1200px;
+    min-height: 600px;
   }
 }
 
 .p-home-mv__content {
   position: relative;
-  z-index: 2;
 }
 
 .p-home-mv__title {
-  font-size: 52px;
+  font-size: 58px;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   line-height: 1;
   white-space: nowrap;
+  text-align: center;
 
   @include global.mq("md") {
-    font-size: 80px;
-  }
-
-  @include global.mq("lg") {
     font-size: 90px;
   }
 
-  @include global.mq("xl") {
+  @include global.mq("lg") {
     font-size: 100px;
   }
 }
@@ -125,157 +105,17 @@ p-home-mv
   }
 }
 
-.p-home-mv__text {
-  margin-top: 24px;
-  padding-left: 8px;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: 0.01em;
-  font-family: var(--font-en);
-
-  &:not(:first-of-type) {
-    margin-top: 10px;
-  }
-
-  span {
-    word-wrap: break-word;
-  }
-
-  @include global.mq("md") {
-    font-size: 20px;
-    margin-top: 32px;
-    padding-left: 15px;
-  }
-
-  @include global.mq("lg") {
-    font-size: 22px;
-  }
-}
-
-.p-home-mv__link {
-  position: relative;
-  display: inline-block;
-  padding-left: 30px;
-  font-size: 14px;
-  font-weight: 700;
-  font-family: var(--font-ja);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: opacity 0.3s;
-
-  img {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(calc(-50%));
-    width: 22px;
-    height: 22px;
-  }
-
-  &:hover {
-    opacity: 0.7;
-  }
-
-  @include global.mq("lg") {
-    font-size: 16px;
-  }
-}
-
-[data-theme="dark"] .p-home-mv__link {
-  img {
-    filter: brightness(0) invert(1);
-  }
-}
-
-.p-home-mv__links {
-  padding-left: 8px;
-  margin-top: 20px;
-  display: flex;
-
-  @include global.mq("md") {
-    margin-top: 32px;
-    padding-left: 15px;
-  }
-}
-
-.p-home-mv__links-item {
-  &:not(:first-of-type) {
-    margin-left: 32px;
-  }
-}
-
-.p-home-mv__image-wrap {
-  position: absolute;
-  top: calc(100% - 20px);
-  right: -20px;
-  width: 100vw;
-  padding-bottom: 81.5%;
-  transform: translateY(-100%);
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  @include global.mq("md") {
-    width: 680px;
-    top: 20px;
-    right: -10px;
-    transform: translateY(0);
-  }
-
-  @include global.mq("lg") {
-    width: 800px;
-    right: -20px;
-  }
-
-  @include global.mq("xl") {
-    width: 900px;
-  }
-}
-
-.p-home-mv__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.p-home-mv__image.is--dark {
-  opacity: 0;
-}
-
-[data-theme="dark"] .p-home-mv__image.is--dark {
-  opacity: 1;
-}
-
-[data-theme="dark"] .p-home-mv__image.is--light {
-  opacity: 0;
-}
-
 .p-home-mv__scroll {
-  position: absolute;
-  bottom: 100px;
-  left: 20px;
-
-  @include global.mq("md") {
-    bottom: 10px;
-    left: 30px;
-  }
-
-  @include global.mq("xl") {
-    left: calc((100% - 1140px) / 2 + 2px);
-    bottom: 30px;
-  }
+  position: relative;
+  margin-top: 40px;
+  padding-bottom: 90px;
 }
 
 .p-home-mv__scroll-bar {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: inline-block;
   width: 5px;
   height: 75px;
@@ -315,9 +155,6 @@ p-home-mv
 }
 
 .p-home-mv__scroll-text {
-  display: inline-block;
-  padding-left: 20px;
-  height: 75px;
-  line-height: 75px;
+  display: block;
   font-family: var(--font-en);
 }

@@ -2,13 +2,6 @@
 /* ============================
 p-home-works
  ============================ */
-.p-home-works {
-  margin-top: 90px;
-
-  @include global.mq("md") {
-    margin-top: 125px;
-  }
-}
 
 .p-home-works__heading {
   text-align: center;
