@@ -10,17 +10,17 @@ const Skills = [
   {
     label: "Typescript",
     icon: "devicon-typescript-plain",
-    rate: 30,
+    rate: 80,
   },
   {
     label: "React.js",
     icon: "devicon-react-plain",
-    rate: 40,
+    rate: 80,
   },
   {
     label: "Next.js",
     icon: "devicon-nextjs-plain",
-    rate: 40,
+    rate: 80,
   },
   {
     label: "Sass",

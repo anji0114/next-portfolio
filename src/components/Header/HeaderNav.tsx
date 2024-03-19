@@ -25,11 +25,6 @@ const NavItems = [
       },
     ],
   },
-  {
-    text: "CONTACT",
-    url: "mailto:tanaka.anji14@gmail.com",
-    arrow: true,
-  },
 ];
 
 export const HeaderNav = (): JSX.Element => {
@@ -58,10 +53,7 @@ export const HeaderNav = (): JSX.Element => {
         <div className="l-header__nav-inner">
           <ul className="l-header__nav-list">
             {NavItems.map((item) => (
-              <li
-                className={`l-header__nav-item ${item.arrow ? "is--arrow" : undefined}`}
-                key={item.text}
-              >
+              <li className={`l-header__nav-item`} key={item.text}>
                 <Link href={item.url} onClick={navClose}>
                   {item.text}
                 </Link>

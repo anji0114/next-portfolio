@@ -2,6 +2,7 @@
 
 .l-footer {
   margin-top: 100px;
+  border-top: 1px solid var(--c-secondary04);
   @include global.mq("md") {
     margin-top: 125px;
   }
