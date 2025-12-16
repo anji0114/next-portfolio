@@ -1,4 +1,3 @@
-import Link from "next/link";
 import "devicon";
 
 const Skills = [
@@ -31,7 +30,6 @@ const Skills = [
     label: "Webpack",
     icon: "devicon-webpack-plain",
     rate: 50,
-    example: "https://github.com/anji0114/wp-theme",
   },
   {
     label: "php",
@@ -52,7 +50,6 @@ const Skills = [
     label: "git",
     icon: "devicon-git-plain",
     rate: 60,
-    example: "https://github.com/anji0114",
   },
 ];
 
@@ -71,16 +68,6 @@ export const AboutSkillList = (): JSX.Element => {
             <p className="p-about-skill__item-rate">{rate}%</p>
             <span className="p-about-skill__item-bg" style={{ width: `${rate}%` }}></span>
           </div>
-          <p className="p-about-skill__item-url">
-            {example ? (
-              <>
-                使用例：
-                <Link href={example} target="_blank">
-                  {example}
-                </Link>
-              </>
-            ) : undefined}
-          </p>
         </li>
       ))}
     </ul>
